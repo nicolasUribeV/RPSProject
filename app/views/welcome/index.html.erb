@@ -14,11 +14,10 @@
 	</style>
 </head>
 <body>
-	
 	<div class= "row">	
 		<div class="span3">
-				<div class = "icon">
-				</div>
+				<p>
+				</p>
 				<div class = "icon">
 					<a class="fontawesome-search button"></a>
 				</div>
@@ -53,9 +52,17 @@
 				    </div>
 				    <div class="item">
 				      <img src="/2.jpg" alt="">
+				      <div class="carousel-caption style">
+			      		<h4>Propiedad</h4>
+			      		<p>Información de la propiedad</p>
+				      </div>
 				    </div>
 				    <div class="item">
 				      <img src="/3.jpg" alt="">
+				      <div class="carousel-caption style">
+			      		<h4>Propiedad</h4>
+			      		<p>Información de la propiedad</p>
+				      </div>
 				    </div>
 				    
 				  </div>
@@ -71,10 +78,10 @@
 			</div>
 		</div>
 		<div class="span3">
-			<h1 style="color: black" aling="center">Login</h1>
+			<h1 style="color: black">Login</h1>
 			<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-			  <div><%= f.label :email %><br />
-			  <%= f.email_field :email, autofocus: true %></div>
+			  <div><%= f.label :Rut %><br />
+			  <%= f.text_field :username, autofocus: true %></div>
 
 			  <div><%= f.label :password %><br />
 			    <%= f.password_field :password, autocomplete: "off" %></div>

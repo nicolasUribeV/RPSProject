@@ -7,29 +7,32 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
-	<div class="row-fluid" style = "background: black">
-		<div class="col-full" >
+  <div class="row-fluid" style = "background: black">
+        <div class="col-full" >
             <div class="span8">
-			     <img src="/logo3.jpg" align="left">
-            </div>
-            <div id="user_nav">
-              <% if user_signed_in? %>
-                Conectado como <%= current_user.email %>. No eres t&uacute;?
-                <%= link_to "Cerrar Sesi&on", destroy_user_session_path, :method => :delete%>
-              <% end %>
+                 <img src="/logo3.jpg" align="left">
             </div>
             <div class="span4">
                 <img src="/logo4.jpg" align= "right">
             </div>
-		</div>
-	</div>
-    <p>
-    </p>
+        </div>
+    </div>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Conectado como <%= current_user.email %>. No eres t&uacute;?
+        <%= link_to "Cerrar Sesi&on", destroy_user_session_path, :method => :delete%>
+      <% end %>
+    </div>
+</head>
+<p>
+</p>
+
+<body>
 	<%= yield %>   
 </body>
 
+<p>
+</p>
 <div class="row-fluid" style="background-color: black" >
 	<div class="container" style = "color: #D0CECF">
         <div class="span4">
