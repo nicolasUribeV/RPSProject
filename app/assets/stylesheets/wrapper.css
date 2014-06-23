@@ -1,0 +1,150 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+h1{
+  font-family: 'Abel', sans-serif;
+  text-align:center;
+  color:rgba(255,255,255,.5);
+  font-size:3rem;
+}
+h2{
+  font-family: 'Abel', sans-serif;
+  text-align:center;
+  color:rgba(255,255,255,.5);
+  font-size:2rem;
+}
+.icon{
+  height:100px;
+  width:100%;
+  text-align:center;
+}
+
+.button{
+  display:inline-block;
+  width: 90px;
+	height: 90px;
+	border-radius: 50%;
+  margin-right:20px;
+  margin-bottom:20px;
+  text-align:center;
+  cursor:pointer;
+}
+.button:after{
+  display:inline-block;
+  position:relative;
+	border-radius: 50%; 
+  content:'';
+  box-sizing:content-box;
+  backface-visibility: hidden;
+}
+.button:before{
+  position:relative;
+  display:block;
+  font-family: 'FontAwesome', sans-serif;
+  font-size:2.5rem;
+  z-index :1;
+  line-height:90px;
+}
+
+
+.fontawesome-envelope{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-search{
+  background: black;
+  transition:background .2s;
+}
+
+.fontawesome-envelope:after{
+  width: 100px;
+	height: 100px;
+  top:-95px;
+  left:-5px;
+  box-shadow: 0 0 0 4px #fff;
+  opacity:0;
+  transform:scale(.8);
+  transition:transform .2s, opacity .2s;
+}
+.fontawesome-search:after{
+  width: 100px;
+	height: 100px;
+  top:-95px;
+  left:-5px;
+  box-shadow: 0 0 0 4px #fff;
+  transition:transform .2s, opacity .2s;
+  transform:scale(1.2);
+  opacity:0;
+}
+
+.fontawesome-envelope:before{
+  color:white;
+  transition:color .2s;
+}
+.fontawesome-search:before{
+  color:white;
+  transition:color .2s;
+}
+
+
+
+.fontawesome-envelope:hover{
+  background: green;
+}
+.fontawesome-search:hover{
+  background: green;
+}
+
+
+.fontawesome-envelope:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-search:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+
+
+.fontawesome-envelope:hover:before{
+  color: white;
+}
+.fontawesome-search:hover:before{
+  color: white;
+} 
+
+
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);  
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+@keyframes slide{
+	49% {
+		transform: translate(-100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translate(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes ripple{
+  0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #52292A, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #52292A, 0 0 0 10px rgba(255,255,255,0.5);
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}

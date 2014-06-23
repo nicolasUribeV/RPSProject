@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RPSProject</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Proyecto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="row-fluid" style = "background: black">
+		<div class="col-full" >
+            <div class="span8">
+			     <img src="/logo3.jpg" align="left">
+            </div>
+            <div class="span4">
+                <img src="/logo4.jpg" align= "right">
+            </div>
+		</div>
+	</div>
+    <p>
+    </p>
+	<%= yield %>   
 </body>
+
+<div class="row-fluid" style="background-color: black" >
+	<div class="container" style = "color: #D0CECF">
+        <div class="span4">
+            <div class="about-us">
+                <h4>Acerca de nosotros</h4>
+                <p>RPS ha sido desarrollado por el grupo de PBD del primer semestre de 2014.</p>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="contact-us">
+                <h4>Contactanos</h4>
+                <li>Tel(+56-9)5-0140003 </li>
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="http://www.usach.cl/" class="replace" target="_blank">Universidad de Santiago de Chile</a></li>
+                    <li><a href="http://www.fing.usach.cl/sitioFING/">Facultad de ingeniería</a></li>
+                    <li><a href="http://www.informatica.usach.cl/">Departamento de ingeniería informática</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>	
+</div>
+
 </html>
