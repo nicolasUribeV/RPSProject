@@ -14,6 +14,12 @@
             <div class="span8">
 			     <img src="/logo3.jpg" align="left">
             </div>
+            <div id="user_nav">
+              <% if user_signed_in? %>
+                Conectado como <%= current_user.email %>. No eres t&uacute;?
+                <%= link_to "Cerrar Sesi&on", destroy_user_session_path, :method => :delete%>
+              <% end %>
+            </div>
             <div class="span4">
                 <img src="/logo4.jpg" align= "right">
             </div>
