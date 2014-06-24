@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :valor_arriendos
 
   resources :notificacions
@@ -49,6 +50,15 @@ Rails.application.routes.draw do
 
   resources :servicios
 
+=======
+  get 'arrend/index'
+
+  get 'prop/index'
+
+  get 'admin/index'
+
+  devise_for :users
+>>>>>>> origin/master
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
