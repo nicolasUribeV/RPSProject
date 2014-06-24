@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'arrend/index'
+
+  get 'prop/index'
+
+  get 'admin/index'
+
+  devise_for :users
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
