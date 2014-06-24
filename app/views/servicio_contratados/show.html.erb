@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Servicio:</strong>
+  <%= @servicio_contratado.Servicio %>
+</p>
+
+<p>
+  <strong>Contratopropiedad:</strong>
+  <%= @servicio_contratado.ContratoPropiedad %>
+</p>
+
+<p>
+  <strong>Precioacordado:</strong>
+  <%= @servicio_contratado.PrecioAcordado %>
+</p>
+
+<p>
+  <strong>Periocidad:</strong>
+  <%= @servicio_contratado.Periocidad %>
+</p>
+
+<p>
+  <strong>Servicioactivo:</strong>
+  <%= @servicio_contratado.ServicioActivo %>
+</p>
+
+<%= link_to 'Edit', edit_servicio_contratado_path(@servicio_contratado) %> |
+<%= link_to 'Back', servicio_contratados_path %>

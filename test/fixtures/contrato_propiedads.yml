@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Propiedad_id: 
+  FechaInicio: 2014-06-23
+  DuracionContrato: 1
+  ContratoDigital: MyString
+  Vigencia: false
+
+two:
+  Propiedad_id: 
+  FechaInicio: 2014-06-23
+  DuracionContrato: 1
+  ContratoDigital: MyString
+  Vigencia: false

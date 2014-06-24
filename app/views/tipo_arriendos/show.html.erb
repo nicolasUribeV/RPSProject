@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipo_arriendo.Descripcion %>
+</p>
+
+<p>
+  <strong>Nombretipo:</strong>
+  <%= @tipo_arriendo.NombreTipo %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_arriendo_path(@tipo_arriendo) %> |
+<%= link_to 'Back', tipo_arriendos_path %>

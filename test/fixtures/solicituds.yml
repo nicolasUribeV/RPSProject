@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Propiedad_id: 
+  Arrendatario_id: 
+  Calendario_id: 
+  Calendario_id: 
+  FechaEmision: 2014-06-23
+  Estado: false
+  TipoSolicitud: MyString
+
+two:
+  Propiedad_id: 
+  Arrendatario_id: 
+  Calendario_id: 
+  Calendario_id: 
+  FechaEmision: 2014-06-23
+  Estado: false
+  TipoSolicitud: MyString

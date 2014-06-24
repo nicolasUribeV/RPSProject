@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CuponPropiedad_id: 
+  ContratoPropiedad_id: 
+  DescripcionDetalle: MyString
+  Total: 1
+  DetalleProcesado: false
+  TipoD: false
+
+two:
+  CuponPropiedad_id: 
+  ContratoPropiedad_id: 
+  DescripcionDetalle: MyString
+  Total: 1
+  DetalleProcesado: false
+  TipoD: false

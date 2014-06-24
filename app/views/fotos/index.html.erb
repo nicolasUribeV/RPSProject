@@ -1,0 +1,29 @@
+<h1>Listing fotos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propiedad</th>
+      <th>Direccionfoto</th>
+      <th>Descripcionfoto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fotos.each do |foto| %>
+      <tr>
+        <td><%= foto.Propiedad %></td>
+        <td><%= foto.DireccionFoto %></td>
+        <td><%= foto.DescripcionFoto %></td>
+        <td><%= link_to 'Show', foto %></td>
+        <td><%= link_to 'Edit', edit_foto_path(foto) %></td>
+        <td><%= link_to 'Destroy', foto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Foto', new_foto_path %>

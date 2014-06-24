@@ -1,0 +1,37 @@
+<%= form_for(@inventario_propiedad) do |f| %>
+  <% if @inventario_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inventario_propiedad.errors.count, "error") %> prohibited this inventario_propiedad from being saved:</h2>
+
+      <ul>
+      <% @inventario_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Item_id %><br>
+    <%= f.text_field :Item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :CantidadItem %><br>
+    <%= f.number_field :CantidadItem %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaInventario %><br>
+    <%= f.date_select :FechaInventario %>
+  </div>
+  <div class="field">
+    <%= f.label :NumeracionInventario %><br>
+    <%= f.number_field :NumeracionInventario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propiedad:</strong>
+  <%= @contrato_arriendo.Propiedad %>
+</p>
+
+<p>
+  <strong>Arrendatario:</strong>
+  <%= @contrato_arriendo.Arrendatario %>
+</p>
+
+<p>
+  <strong>Fechainicioarriendo:</strong>
+  <%= @contrato_arriendo.FechaInicioArriendo %>
+</p>
+
+<p>
+  <strong>Fechaterminoarriendo:</strong>
+  <%= @contrato_arriendo.FechaTerminoArriendo %>
+</p>
+
+<p>
+  <strong>Tiporenovacion:</strong>
+  <%= @contrato_arriendo.TipoRenovacion %>
+</p>
+
+<p>
+  <strong>Periodoreajuste:</strong>
+  <%= @contrato_arriendo.PeriodoReajuste %>
+</p>
+
+<p>
+  <strong>Multaperiocidad:</strong>
+  <%= @contrato_arriendo.MultaPeriocidad %>
+</p>
+
+<p>
+  <strong>Diapago:</strong>
+  <%= @contrato_arriendo.DiaPago %>
+</p>
+
+<p>
+  <strong>Contratodigital:</strong>
+  <%= @contrato_arriendo.ContratoDigital %>
+</p>
+
+<%= link_to 'Edit', edit_contrato_arriendo_path(@contrato_arriendo) %> |
+<%= link_to 'Back', contrato_arriendos_path %>

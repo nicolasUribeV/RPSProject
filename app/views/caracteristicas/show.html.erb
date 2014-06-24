@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombrecaracteristica:</strong>
+  <%= @caracteristica.NombreCaracteristica %>
+</p>
+
+<p>
+  <strong>Unidadmedida:</strong>
+  <%= @caracteristica.UnidadMedida %>
+</p>
+
+<%= link_to 'Edit', edit_caracteristica_path(@caracteristica) %> |
+<%= link_to 'Back', caracteristicas_path %>

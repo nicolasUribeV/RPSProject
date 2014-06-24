@@ -1,0 +1,25 @@
+<h1>Listing propietarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @propietarios.each do |propietario| %>
+      <tr>
+        <td><%= propietario.Usuario %></td>
+        <td><%= link_to 'Show', propietario %></td>
+        <td><%= link_to 'Edit', edit_propietario_path(propietario) %></td>
+        <td><%= link_to 'Destroy', propietario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Propietario', new_propietario_path %>

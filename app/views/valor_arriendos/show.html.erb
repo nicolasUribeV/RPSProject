@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipoarriendo:</strong>
+  <%= @valor_arriendo.TipoArriendo %>
+</p>
+
+<p>
+  <strong>Propiedad:</strong>
+  <%= @valor_arriendo.Propiedad %>
+</p>
+
+<p>
+  <strong>Valordefinido:</strong>
+  <%= @valor_arriendo.ValorDefinido %>
+</p>
+
+<p>
+  <strong>Temporada:</strong>
+  <%= @valor_arriendo.Temporada %>
+</p>
+
+<p>
+  <strong>Valoractivo:</strong>
+  <%= @valor_arriendo.ValorActivo %>
+</p>
+
+<p>
+  <strong>Fechainiciotemp:</strong>
+  <%= @valor_arriendo.FechaInicioTemp %>
+</p>
+
+<p>
+  <strong>Fechaterminotemp:</strong>
+  <%= @valor_arriendo.FechaTerminoTemp %>
+</p>
+
+<%= link_to 'Edit', edit_valor_arriendo_path(@valor_arriendo) %> |
+<%= link_to 'Back', valor_arriendos_path %>

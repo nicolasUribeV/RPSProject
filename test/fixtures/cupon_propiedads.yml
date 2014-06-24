@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CuponPropietario_id: 
+  ContratoPropiedad_id: 
+  TotalCobros: 1
+  TotalPagos: 1
+  DescripcionCP: MyText
+  FechaEmisionCP: 2014-06-23
+  CPProcesada: false
+
+two:
+  CuponPropietario_id: 
+  ContratoPropiedad_id: 
+  TotalCobros: 1
+  TotalPagos: 1
+  DescripcionCP: MyText
+  FechaEmisionCP: 2014-06-23
+  CPProcesada: false

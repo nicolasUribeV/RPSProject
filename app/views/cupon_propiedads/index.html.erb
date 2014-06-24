@@ -1,0 +1,37 @@
+<h1>Listing cupon_propiedads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cuponpropietario</th>
+      <th>Contratopropiedad</th>
+      <th>Totalcobros</th>
+      <th>Totalpagos</th>
+      <th>Descripcioncp</th>
+      <th>Fechaemisioncp</th>
+      <th>Cpprocesada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cupon_propiedads.each do |cupon_propiedad| %>
+      <tr>
+        <td><%= cupon_propiedad.CuponPropietario %></td>
+        <td><%= cupon_propiedad.ContratoPropiedad %></td>
+        <td><%= cupon_propiedad.TotalCobros %></td>
+        <td><%= cupon_propiedad.TotalPagos %></td>
+        <td><%= cupon_propiedad.DescripcionCP %></td>
+        <td><%= cupon_propiedad.FechaEmisionCP %></td>
+        <td><%= cupon_propiedad.CPProcesada %></td>
+        <td><%= link_to 'Show', cupon_propiedad %></td>
+        <td><%= link_to 'Edit', edit_cupon_propiedad_path(cupon_propiedad) %></td>
+        <td><%= link_to 'Destroy', cupon_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cupon propiedad', new_cupon_propiedad_path %>

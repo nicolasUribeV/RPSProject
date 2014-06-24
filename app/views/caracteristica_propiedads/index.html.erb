@@ -1,0 +1,29 @@
+<h1>Listing caracteristica_propiedads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propiedad</th>
+      <th>Caracteristica</th>
+      <th>Valorcaracteristica</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caracteristica_propiedads.each do |caracteristica_propiedad| %>
+      <tr>
+        <td><%= caracteristica_propiedad.Propiedad %></td>
+        <td><%= caracteristica_propiedad.Caracteristica %></td>
+        <td><%= caracteristica_propiedad.ValorCaracteristica %></td>
+        <td><%= link_to 'Show', caracteristica_propiedad %></td>
+        <td><%= link_to 'Edit', edit_caracteristica_propiedad_path(caracteristica_propiedad) %></td>
+        <td><%= link_to 'Destroy', caracteristica_propiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Caracteristica propiedad', new_caracteristica_propiedad_path %>

@@ -1,0 +1,2 @@
+module CuponPropietariosHelper
+end

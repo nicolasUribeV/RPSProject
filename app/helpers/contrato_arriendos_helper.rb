@@ -1,0 +1,2 @@
+module ContratoArriendosHelper
+end

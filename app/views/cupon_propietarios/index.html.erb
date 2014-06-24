@@ -1,0 +1,31 @@
+<h1>Listing cupon_propietarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propietario</th>
+      <th>Totalcobrosprop</th>
+      <th>Totalpagosprop</th>
+      <th>Fechaemisionprop</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cupon_propietarios.each do |cupon_propietario| %>
+      <tr>
+        <td><%= cupon_propietario.Propietario %></td>
+        <td><%= cupon_propietario.TotalCobrosProp %></td>
+        <td><%= cupon_propietario.TotalPagosProp %></td>
+        <td><%= cupon_propietario.FechaEmisionProp %></td>
+        <td><%= link_to 'Show', cupon_propietario %></td>
+        <td><%= link_to 'Edit', edit_cupon_propietario_path(cupon_propietario) %></td>
+        <td><%= link_to 'Destroy', cupon_propietario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cupon propietario', new_cupon_propietario_path %>

@@ -1,0 +1,33 @@
+<h1>Listing cupon_pago_arrendatarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contratoarriendo</th>
+      <th>Fechaemision</th>
+      <th>Total</th>
+      <th>Comentario</th>
+      <th>Liquidacionprocesada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cupon_pago_arrendatarios.each do |cupon_pago_arrendatario| %>
+      <tr>
+        <td><%= cupon_pago_arrendatario.ContratoArriendo %></td>
+        <td><%= cupon_pago_arrendatario.FechaEmision %></td>
+        <td><%= cupon_pago_arrendatario.Total %></td>
+        <td><%= cupon_pago_arrendatario.Comentario %></td>
+        <td><%= cupon_pago_arrendatario.LiquidacionProcesada %></td>
+        <td><%= link_to 'Show', cupon_pago_arrendatario %></td>
+        <td><%= link_to 'Edit', edit_cupon_pago_arrendatario_path(cupon_pago_arrendatario) %></td>
+        <td><%= link_to 'Destroy', cupon_pago_arrendatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cupon pago arrendatario', new_cupon_pago_arrendatario_path %>

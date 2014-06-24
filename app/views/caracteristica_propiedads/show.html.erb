@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propiedad:</strong>
+  <%= @caracteristica_propiedad.Propiedad %>
+</p>
+
+<p>
+  <strong>Caracteristica:</strong>
+  <%= @caracteristica_propiedad.Caracteristica %>
+</p>
+
+<p>
+  <strong>Valorcaracteristica:</strong>
+  <%= @caracteristica_propiedad.ValorCaracteristica %>
+</p>
+
+<%= link_to 'Edit', edit_caracteristica_propiedad_path(@caracteristica_propiedad) %> |
+<%= link_to 'Back', caracteristica_propiedads_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cuponpropiedad:</strong>
+  <%= @detalle_cupon.CuponPropiedad %>
+</p>
+
+<p>
+  <strong>Contratopropiedad:</strong>
+  <%= @detalle_cupon.ContratoPropiedad %>
+</p>
+
+<p>
+  <strong>Descripciondetalle:</strong>
+  <%= @detalle_cupon.DescripcionDetalle %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @detalle_cupon.Total %>
+</p>
+
+<p>
+  <strong>Detalleprocesado:</strong>
+  <%= @detalle_cupon.DetalleProcesado %>
+</p>
+
+<p>
+  <strong>Tipod:</strong>
+  <%= @detalle_cupon.TipoD %>
+</p>
+
+<%= link_to 'Edit', edit_detalle_cupon_path(@detalle_cupon) %> |
+<%= link_to 'Back', detalle_cupons_path %>

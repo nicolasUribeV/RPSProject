@@ -1,0 +1,53 @@
+<%= form_for(@contrato_arriendo) do |f| %>
+  <% if @contrato_arriendo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contrato_arriendo.errors.count, "error") %> prohibited this contrato_arriendo from being saved:</h2>
+
+      <ul>
+      <% @contrato_arriendo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Arrendatario_id %><br>
+    <%= f.text_field :Arrendatario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaInicioArriendo %><br>
+    <%= f.date_select :FechaInicioArriendo %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaTerminoArriendo %><br>
+    <%= f.date_select :FechaTerminoArriendo %>
+  </div>
+  <div class="field">
+    <%= f.label :TipoRenovacion %><br>
+    <%= f.text_field :TipoRenovacion %>
+  </div>
+  <div class="field">
+    <%= f.label :PeriodoReajuste %><br>
+    <%= f.number_field :PeriodoReajuste %>
+  </div>
+  <div class="field">
+    <%= f.label :MultaPeriocidad %><br>
+    <%= f.number_field :MultaPeriocidad %>
+  </div>
+  <div class="field">
+    <%= f.label :DiaPago %><br>
+    <%= f.number_field :DiaPago %>
+  </div>
+  <div class="field">
+    <%= f.label :ContratoDigital %><br>
+    <%= f.text_field :ContratoDigital %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

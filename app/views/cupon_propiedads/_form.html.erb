@@ -1,0 +1,45 @@
+<%= form_for(@cupon_propiedad) do |f| %>
+  <% if @cupon_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cupon_propiedad.errors.count, "error") %> prohibited this cupon_propiedad from being saved:</h2>
+
+      <ul>
+      <% @cupon_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :CuponPropietario_id %><br>
+    <%= f.text_field :CuponPropietario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ContratoPropiedad_id %><br>
+    <%= f.text_field :ContratoPropiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :TotalCobros %><br>
+    <%= f.number_field :TotalCobros %>
+  </div>
+  <div class="field">
+    <%= f.label :TotalPagos %><br>
+    <%= f.number_field :TotalPagos %>
+  </div>
+  <div class="field">
+    <%= f.label :DescripcionCP %><br>
+    <%= f.text_area :DescripcionCP %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaEmisionCP %><br>
+    <%= f.date_select :FechaEmisionCP %>
+  </div>
+  <div class="field">
+    <%= f.label :CPProcesada %><br>
+    <%= f.check_box :CPProcesada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

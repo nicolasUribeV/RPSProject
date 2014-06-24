@@ -1,0 +1,1 @@
+json.extract! @contrato_arriendo, :id, :Propiedad_id, :Arrendatario_id, :FechaInicioArriendo, :FechaTerminoArriendo, :TipoRenovacion, :PeriodoReajuste, :MultaPeriocidad, :DiaPago, :ContratoDigital, :created_at, :updated_at

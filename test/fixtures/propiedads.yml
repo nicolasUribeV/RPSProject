@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Ubicacion_id: 
+  TipoPropiedad_id: 
+  Propietario_id: 
+  DireccionPropiedad: MyString
+  Estacionamiento: false
+  Bodega: false
+  EquipadaMuebles: false
+  M2Totales: 1
+  Descripcion: MyText
+  Habilitada: false
+
+two:
+  Ubicacion_id: 
+  TipoPropiedad_id: 
+  Propietario_id: 
+  DireccionPropiedad: MyString
+  Estacionamiento: false
+  Bodega: false
+  EquipadaMuebles: false
+  M2Totales: 1
+  Descripcion: MyText
+  Habilitada: false

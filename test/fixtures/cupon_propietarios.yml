@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Propietario_id: 
+  TotalCobrosProp: 1
+  TotalPagosProp: 1
+  FechaEmisionProp: 2014-06-23
+
+two:
+  Propietario_id: 
+  TotalCobrosProp: 1
+  TotalPagosProp: 1
+  FechaEmisionProp: 2014-06-23

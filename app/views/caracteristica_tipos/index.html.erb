@@ -1,0 +1,27 @@
+<h1>Listing caracteristica_tipos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipopropiedad</th>
+      <th>Caracteristica</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caracteristica_tipos.each do |caracteristica_tipo| %>
+      <tr>
+        <td><%= caracteristica_tipo.TipoPropiedad %></td>
+        <td><%= caracteristica_tipo.Caracteristica %></td>
+        <td><%= link_to 'Show', caracteristica_tipo %></td>
+        <td><%= link_to 'Edit', edit_caracteristica_tipo_path(caracteristica_tipo) %></td>
+        <td><%= link_to 'Destroy', caracteristica_tipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Caracteristica tipo', new_caracteristica_tipo_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@contrato_propiedad) do |f| %>
+  <% if @contrato_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contrato_propiedad.errors.count, "error") %> prohibited this contrato_propiedad from being saved:</h2>
+
+      <ul>
+      <% @contrato_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaInicio %><br>
+    <%= f.date_select :FechaInicio %>
+  </div>
+  <div class="field">
+    <%= f.label :DuracionContrato %><br>
+    <%= f.number_field :DuracionContrato %>
+  </div>
+  <div class="field">
+    <%= f.label :ContratoDigital %><br>
+    <%= f.text_field :ContratoDigital %>
+  </div>
+  <div class="field">
+    <%= f.label :Vigencia %><br>
+    <%= f.check_box :Vigencia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

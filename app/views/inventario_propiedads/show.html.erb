@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @inventario_propiedad.Item %>
+</p>
+
+<p>
+  <strong>Propiedad:</strong>
+  <%= @inventario_propiedad.Propiedad %>
+</p>
+
+<p>
+  <strong>Cantidaditem:</strong>
+  <%= @inventario_propiedad.CantidadItem %>
+</p>
+
+<p>
+  <strong>Fechainventario:</strong>
+  <%= @inventario_propiedad.FechaInventario %>
+</p>
+
+<p>
+  <strong>Numeracioninventario:</strong>
+  <%= @inventario_propiedad.NumeracionInventario %>
+</p>
+
+<%= link_to 'Edit', edit_inventario_propiedad_path(@inventario_propiedad) %> |
+<%= link_to 'Back', inventario_propiedads_path %>

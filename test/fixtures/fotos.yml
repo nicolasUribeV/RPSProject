@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Propiedad_id: 
+  DireccionFoto: MyString
+  DescripcionFoto: MyText
+
+two:
+  Propiedad_id: 
+  DireccionFoto: MyString
+  DescripcionFoto: MyText

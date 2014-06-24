@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  TipoArriendo_id: 
+  Propiedad_id: 
+  ValorDefinido: 1
+  Temporada: MyString
+  ValorActivo: false
+  FechaInicioTemp: 2014-06-23
+  FechaTerminoTemp: 2014-06-23
+
+two:
+  TipoArriendo_id: 
+  Propiedad_id: 
+  ValorDefinido: 1
+  Temporada: MyString
+  ValorActivo: false
+  FechaInicioTemp: 2014-06-23
+  FechaTerminoTemp: 2014-06-23

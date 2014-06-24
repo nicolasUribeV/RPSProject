@@ -1,4 +1,54 @@
 Rails.application.routes.draw do
+  resources :valor_arriendos
+
+  resources :notificacions
+
+  resources :detalle_cupons
+
+  resources :cupon_propiedads
+
+  resources :cupon_propietarios
+
+  resources :servicio_contratados
+
+  resources :contrato_propiedads
+
+  resources :fotos
+
+  resources :inventario_propiedads
+
+  resources :caracteristica_propiedads
+
+  resources :caracteristica_tipos
+
+  resources :solicituds
+
+  resources :cupon_pago_arrendatarios
+
+  resources :contrato_arriendos
+
+  resources :propiedads
+
+  resources :propietarios
+
+  resources :arrendatarios
+
+  resources :ubicacions
+
+  resources :usuarios
+
+  resources :calendarios
+
+  resources :tipo_propiedads
+
+  resources :caracteristicas
+
+  resources :tipo_arriendos
+
+  resources :items
+
+  resources :servicios
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

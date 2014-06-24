@@ -1,0 +1,57 @@
+<%= form_for(@propiedad) do |f| %>
+  <% if @propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@propiedad.errors.count, "error") %> prohibited this propiedad from being saved:</h2>
+
+      <ul>
+      <% @propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Ubicacion_id %><br>
+    <%= f.text_field :Ubicacion_id %>
+  </div>
+  <div class="field">
+    <%= f.label :TipoPropiedad_id %><br>
+    <%= f.text_field :TipoPropiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Propietario_id %><br>
+    <%= f.text_field :Propietario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :DireccionPropiedad %><br>
+    <%= f.text_field :DireccionPropiedad %>
+  </div>
+  <div class="field">
+    <%= f.label :Estacionamiento %><br>
+    <%= f.check_box :Estacionamiento %>
+  </div>
+  <div class="field">
+    <%= f.label :Bodega %><br>
+    <%= f.check_box :Bodega %>
+  </div>
+  <div class="field">
+    <%= f.label :EquipadaMuebles %><br>
+    <%= f.check_box :EquipadaMuebles %>
+  </div>
+  <div class="field">
+    <%= f.label :M2Totales %><br>
+    <%= f.number_field :M2Totales %>
+  </div>
+  <div class="field">
+    <%= f.label :Descripcion %><br>
+    <%= f.text_area :Descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :Habilitada %><br>
+    <%= f.check_box :Habilitada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

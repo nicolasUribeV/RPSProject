@@ -1,0 +1,1 @@
+json.extract! @propiedad, :id, :Ubicacion_id, :TipoPropiedad_id, :Propietario_id, :DireccionPropiedad, :Estacionamiento, :Bodega, :EquipadaMuebles, :M2Totales, :Descripcion, :Habilitada, :created_at, :updated_at

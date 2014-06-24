@@ -1,0 +1,35 @@
+<h1>Listing detalle_cupons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cuponpropiedad</th>
+      <th>Contratopropiedad</th>
+      <th>Descripciondetalle</th>
+      <th>Total</th>
+      <th>Detalleprocesado</th>
+      <th>Tipod</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detalle_cupons.each do |detalle_cupon| %>
+      <tr>
+        <td><%= detalle_cupon.CuponPropiedad %></td>
+        <td><%= detalle_cupon.ContratoPropiedad %></td>
+        <td><%= detalle_cupon.DescripcionDetalle %></td>
+        <td><%= detalle_cupon.Total %></td>
+        <td><%= detalle_cupon.DetalleProcesado %></td>
+        <td><%= detalle_cupon.TipoD %></td>
+        <td><%= link_to 'Show', detalle_cupon %></td>
+        <td><%= link_to 'Edit', edit_detalle_cupon_path(detalle_cupon) %></td>
+        <td><%= link_to 'Destroy', detalle_cupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detalle cupon', new_detalle_cupon_path %>

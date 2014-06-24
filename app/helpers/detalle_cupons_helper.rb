@@ -1,0 +1,2 @@
+module DetalleCuponsHelper
+end

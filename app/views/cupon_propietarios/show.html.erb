@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propietario:</strong>
+  <%= @cupon_propietario.Propietario %>
+</p>
+
+<p>
+  <strong>Totalcobrosprop:</strong>
+  <%= @cupon_propietario.TotalCobrosProp %>
+</p>
+
+<p>
+  <strong>Totalpagosprop:</strong>
+  <%= @cupon_propietario.TotalPagosProp %>
+</p>
+
+<p>
+  <strong>Fechaemisionprop:</strong>
+  <%= @cupon_propietario.FechaEmisionProp %>
+</p>
+
+<%= link_to 'Edit', edit_cupon_propietario_path(@cupon_propietario) %> |
+<%= link_to 'Back', cupon_propietarios_path %>

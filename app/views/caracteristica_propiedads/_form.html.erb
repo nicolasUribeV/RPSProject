@@ -1,0 +1,29 @@
+<%= form_for(@caracteristica_propiedad) do |f| %>
+  <% if @caracteristica_propiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@caracteristica_propiedad.errors.count, "error") %> prohibited this caracteristica_propiedad from being saved:</h2>
+
+      <ul>
+      <% @caracteristica_propiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Caracteristica_id %><br>
+    <%= f.text_field :Caracteristica_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ValorCaracteristica %><br>
+    <%= f.text_field :ValorCaracteristica %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

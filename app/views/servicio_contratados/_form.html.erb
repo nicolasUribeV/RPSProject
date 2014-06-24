@@ -1,0 +1,37 @@
+<%= form_for(@servicio_contratado) do |f| %>
+  <% if @servicio_contratado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servicio_contratado.errors.count, "error") %> prohibited this servicio_contratado from being saved:</h2>
+
+      <ul>
+      <% @servicio_contratado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Servicio_id %><br>
+    <%= f.text_field :Servicio_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ContratoPropiedad_id %><br>
+    <%= f.text_field :ContratoPropiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :PrecioAcordado %><br>
+    <%= f.number_field :PrecioAcordado %>
+  </div>
+  <div class="field">
+    <%= f.label :Periocidad %><br>
+    <%= f.text_field :Periocidad %>
+  </div>
+  <div class="field">
+    <%= f.label :ServicioActivo %><br>
+    <%= f.check_box :ServicioActivo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

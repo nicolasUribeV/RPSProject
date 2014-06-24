@@ -1,0 +1,29 @@
+<%= form_for(@foto) do |f| %>
+  <% if @foto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@foto.errors.count, "error") %> prohibited this foto from being saved:</h2>
+
+      <ul>
+      <% @foto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :DireccionFoto %><br>
+    <%= f.text_field :DireccionFoto %>
+  </div>
+  <div class="field">
+    <%= f.label :DescripcionFoto %><br>
+    <%= f.text_area :DescripcionFoto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

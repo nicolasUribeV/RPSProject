@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Servicio_id: 
+  ContratoPropiedad_id: 
+  PrecioAcordado: 1
+  Periocidad: MyString
+  ServicioActivo: false
+
+two:
+  Servicio_id: 
+  ContratoPropiedad_id: 
+  PrecioAcordado: 1
+  Periocidad: MyString
+  ServicioActivo: false

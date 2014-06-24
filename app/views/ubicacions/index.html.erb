@@ -1,0 +1,27 @@
+<h1>Listing ubicacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ubicacion</th>
+      <th>Nombreubicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ubicacions.each do |ubicacion| %>
+      <tr>
+        <td><%= ubicacion.Ubicacion %></td>
+        <td><%= ubicacion.NombreUbicacion %></td>
+        <td><%= link_to 'Show', ubicacion %></td>
+        <td><%= link_to 'Edit', edit_ubicacion_path(ubicacion) %></td>
+        <td><%= link_to 'Destroy', ubicacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ubicacion', new_ubicacion_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@arrendatario) do |f| %>
+  <% if @arrendatario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@arrendatario.errors.count, "error") %> prohibited this arrendatario from being saved:</h2>
+
+      <ul>
+      <% @arrendatario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Usuario_id %><br>
+    <%= f.text_field :Usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

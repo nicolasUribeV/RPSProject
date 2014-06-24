@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propiedad:</strong>
+  <%= @contrato_propiedad.Propiedad %>
+</p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @contrato_propiedad.FechaInicio %>
+</p>
+
+<p>
+  <strong>Duracioncontrato:</strong>
+  <%= @contrato_propiedad.DuracionContrato %>
+</p>
+
+<p>
+  <strong>Contratodigital:</strong>
+  <%= @contrato_propiedad.ContratoDigital %>
+</p>
+
+<p>
+  <strong>Vigencia:</strong>
+  <%= @contrato_propiedad.Vigencia %>
+</p>
+
+<%= link_to 'Edit', edit_contrato_propiedad_path(@contrato_propiedad) %> |
+<%= link_to 'Back', contrato_propiedads_path %>

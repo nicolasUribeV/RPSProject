@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @notificacion.Usuario %>
+</p>
+
+<p>
+  <strong>Descripcionnotificacion:</strong>
+  <%= @notificacion.DescripcionNotificacion %>
+</p>
+
+<p>
+  <strong>Visualizado:</strong>
+  <%= @notificacion.Visualizado %>
+</p>
+
+<p>
+  <strong>Redireccion:</strong>
+  <%= @notificacion.Redireccion %>
+</p>
+
+<%= link_to 'Edit', edit_notificacion_path(@notificacion) %> |
+<%= link_to 'Back', notificacions_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contratoarriendo:</strong>
+  <%= @cupon_pago_arrendatario.ContratoArriendo %>
+</p>
+
+<p>
+  <strong>Fechaemision:</strong>
+  <%= @cupon_pago_arrendatario.FechaEmision %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @cupon_pago_arrendatario.Total %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @cupon_pago_arrendatario.Comentario %>
+</p>
+
+<p>
+  <strong>Liquidacionprocesada:</strong>
+  <%= @cupon_pago_arrendatario.LiquidacionProcesada %>
+</p>
+
+<%= link_to 'Edit', edit_cupon_pago_arrendatario_path(@cupon_pago_arrendatario) %> |
+<%= link_to 'Back', cupon_pago_arrendatarios_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@cupon_pago_arrendatario) do |f| %>
+  <% if @cupon_pago_arrendatario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cupon_pago_arrendatario.errors.count, "error") %> prohibited this cupon_pago_arrendatario from being saved:</h2>
+
+      <ul>
+      <% @cupon_pago_arrendatario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ContratoArriendo_id %><br>
+    <%= f.text_field :ContratoArriendo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaEmision %><br>
+    <%= f.date_select :FechaEmision %>
+  </div>
+  <div class="field">
+    <%= f.label :Total %><br>
+    <%= f.number_field :Total %>
+  </div>
+  <div class="field">
+    <%= f.label :Comentario %><br>
+    <%= f.text_area :Comentario %>
+  </div>
+  <div class="field">
+    <%= f.label :LiquidacionProcesada %><br>
+    <%= f.check_box :LiquidacionProcesada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

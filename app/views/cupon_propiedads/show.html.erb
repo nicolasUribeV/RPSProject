@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cuponpropietario:</strong>
+  <%= @cupon_propiedad.CuponPropietario %>
+</p>
+
+<p>
+  <strong>Contratopropiedad:</strong>
+  <%= @cupon_propiedad.ContratoPropiedad %>
+</p>
+
+<p>
+  <strong>Totalcobros:</strong>
+  <%= @cupon_propiedad.TotalCobros %>
+</p>
+
+<p>
+  <strong>Totalpagos:</strong>
+  <%= @cupon_propiedad.TotalPagos %>
+</p>
+
+<p>
+  <strong>Descripcioncp:</strong>
+  <%= @cupon_propiedad.DescripcionCP %>
+</p>
+
+<p>
+  <strong>Fechaemisioncp:</strong>
+  <%= @cupon_propiedad.FechaEmisionCP %>
+</p>
+
+<p>
+  <strong>Cpprocesada:</strong>
+  <%= @cupon_propiedad.CPProcesada %>
+</p>
+
+<%= link_to 'Edit', edit_cupon_propiedad_path(@cupon_propiedad) %> |
+<%= link_to 'Back', cupon_propiedads_path %>

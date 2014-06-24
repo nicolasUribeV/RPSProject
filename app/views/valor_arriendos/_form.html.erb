@@ -1,0 +1,45 @@
+<%= form_for(@valor_arriendo) do |f| %>
+  <% if @valor_arriendo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@valor_arriendo.errors.count, "error") %> prohibited this valor_arriendo from being saved:</h2>
+
+      <ul>
+      <% @valor_arriendo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :TipoArriendo_id %><br>
+    <%= f.text_field :TipoArriendo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ValorDefinido %><br>
+    <%= f.number_field :ValorDefinido %>
+  </div>
+  <div class="field">
+    <%= f.label :Temporada %><br>
+    <%= f.text_field :Temporada %>
+  </div>
+  <div class="field">
+    <%= f.label :ValorActivo %><br>
+    <%= f.check_box :ValorActivo %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaInicioTemp %><br>
+    <%= f.date_select :FechaInicioTemp %>
+  </div>
+  <div class="field">
+    <%= f.label :FechaTerminoTemp %><br>
+    <%= f.date_select :FechaTerminoTemp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
