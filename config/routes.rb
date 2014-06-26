@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :valor_arriendos
 
   resources :notificacions
@@ -27,7 +28,11 @@ Rails.application.routes.draw do
 
   resources :contrato_arriendos
 
-  resources :propiedads
+  resources :propiedads do
+    collection do
+      get :buscar_propiedad
+  end
+end
 
   resources :propietarios
 

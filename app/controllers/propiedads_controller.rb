@@ -7,6 +7,10 @@ class PropiedadsController < ApplicationController
     @propiedads = Propiedad.all
   end
 
+  def buscar_propiedad
+    @propiedads = Propiedad.all
+  end
+
   # GET /propiedads/1
   # GET /propiedads/1.json
   def show
