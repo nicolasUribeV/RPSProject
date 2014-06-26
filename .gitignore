@@ -16,4 +16,4 @@
 /log/*.log
 /tmp
 
-
+/app/assets/stylesheets/bootstrap.css
