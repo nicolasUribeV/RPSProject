@@ -9,7 +9,7 @@ en:
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Tu cuenta no ha sido activada."
-      invalid: "RUT o Contraseña Invalida."
+      invalid: "RUT o Contrasegna Invalida."
       locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account will be locked."
       not_found_in_database: "Invalid email or password."
