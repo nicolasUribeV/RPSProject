@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :Ubicacion_id %><br>
-    <%= f.text_field :Ubicacion_id %>
+    <%= f.collection_select :Ubicacion_id, Ubicacion.order(:NombreUbicacion), :id, :NombreUbicacion, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :NombreUbicacion %><br>

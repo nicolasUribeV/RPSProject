@@ -13,11 +13,12 @@
 
   <div class="field">
     <%= f.label :Propiedad_id %><br>
-    <%= f.text_field :Propiedad_id %>
+    <%= f.collection_select :Propiedad_id, Propiedad.order(:id), :id,:id, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :Caracteristica_id %><br>
     <%= f.text_field :Caracteristica_id %>
+    <%= f.collection_select :Caracteristica_id, Caracteristica.order(:id), :id,:id, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :ValorCaracteristica %><br>

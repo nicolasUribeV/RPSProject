@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :Usuario_id %><br>
-    <%= f.text_field :Usuario_id %>
+    <%= f.collection_select :Usuario_id, Usuario.joins("LEFT JOIN arrendatarios ON usuarios.idS = arrendatarios.usuario_id").where("arrendatarios.usuario_id IS NULL").order(:Nombre), :id, :Nombre, include_blank: false %>
   </div>
   <div class="actions">
     <%= f.submit %>
