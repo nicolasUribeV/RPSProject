@@ -84,6 +84,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    role_model (0.8.1)
     rut_validator (0.0.2)
       activemodel
     sass (3.2.19)
@@ -132,6 +133,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.1.1)
+  role_model
   rut_validator
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

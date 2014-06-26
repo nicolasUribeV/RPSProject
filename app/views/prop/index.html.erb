@@ -1,2 +1,13 @@
-<h2>Prop#index</h2>
-<p>Find me in app/views/prop/index.html.erb</p>
+<% if current_user.is? :prop %>
+	<p>
+	     BIENVENIDO ropietario <%= current_user.username %>.
+	</p>
+<% elsif current_user.is? :arrend %>
+	<p>
+	     BIENVENIDO arrendatario  <%= current_user.username %>.
+	</p>
+<% else %>
+	<p>
+	     BIENVENIDO administrador <%= current_user.username%>.
+	</p>
+<% end %>

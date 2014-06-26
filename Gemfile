@@ -40,3 +40,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'devise'
 gem 'rut_validator'
+gem "role_model"

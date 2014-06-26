@@ -56,6 +56,19 @@ Rails.application.routes.draw do
   get 'admin/index'
 
   devise_for :users
+  devise_scope :user do
+    authenticated :user do
+      if !:user.nil? then
+        root :to => 'prop#index', as: :authenticated_root
+      end
+      # root :to => 'prop#index', as: :authenticated_root
+    end
+    unauthenticated :user do
+      root :to => 'welcome#index', as: :unauthenticated_root
+    end
+  end
+
+
   
   get 'welcome/index'
 
