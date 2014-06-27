@@ -47,19 +47,17 @@
     </div>
     <div id="user_nav">
       <% if user_signed_in? %>
-      
-        <div class= "container" style ="font-family: 'Arial'; color: white">
-          <div class="row" style = "background: #B0A9AA; height: 30px">
-              <div class="span6">
-                <h4>
-                   Bienvenido  <%= current_user.username %>
+          <div class="row" style = "background: black; height: 30px; border: 2px solid white">
+              <div class="span" align="left">
+                <h4 style ="font-family: 'Calibri'; color: #3B82CC; font-size: 15px; line-height: 50%">
+                   Bienvenido,  <%= current_user.username %>
                 </h4>
               </div>
-              <div class="span4" align = "right">
-                 <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete%>
+              <div align = "right">
+                 <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete, :class => 'btn btn-link' %>
               </div>
           </div>
-        </div>
+        
       <% end %>
     </div>
 </head>
