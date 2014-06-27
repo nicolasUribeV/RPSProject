@@ -47,12 +47,17 @@
     </div>
     <div id="user_nav">
       <% if user_signed_in? %>
-        <div class="row-fluid" style = "background: grey">
-          <h4>
-             BIENVENIDO  <%= current_user.username %>.
-          </h4>
-          <div align = "right">
-             <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete%>
+      
+        <div class= "container" style ="font-family: 'Arial'; color: white">
+          <div class="row" style = "background: #B0A9AA; height: 30px">
+              <div class="span6">
+                <h4>
+                   Bienvenido  <%= current_user.username %>
+                </h4>
+              </div>
+              <div class="span4" align = "right">
+                 <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete%>
+              </div>
           </div>
         </div>
       <% end %>
