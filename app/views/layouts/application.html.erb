@@ -30,6 +30,54 @@
     height: 150px;
     margin: -150px auto 0;
     }
+
+    .notificationCont {
+  position: relative;
+  width:90px;
+  padding-top:10px;
+}
+
+.notification {
+  border-radius: 10px;
+  background: linear-gradient(top, #FF3019 0, #CF0404 75%);
+  border: 1px solid white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.75);
+  box-shadow: 1px 1px 5px rgba(0,0,0,.75);
+  display: block;
+  background: #FF3019;
+  background-repeat: repeat-x;
+  background: linear-gradient(top, #FF3019 0, #CF0404 75%);
+  position: absolute;
+  right: -8px;
+  font-size: 9px;
+  color: white;
+  padding: 3px 4px;
+  top:5px;
+  line-height: 90%;
+  text-shadow: none;
+}
+.btn {  
+  border: 1px solid #CCC;
+  background-color: #C43C35;
+  background-repeat: repeat-x;  
+  background-image: linear-gradient(top, #EE5F5B, #C43C35); 
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25); 
+  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25); 
+  
+  padding: 7px 9px 7px;
+  font-size: 11px;  
+  border-radius: 4px;
+  color: white;
+  cursor:pointer;
+  display:inline-block;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05); 
+  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+  -webkit-appearance: button;
+  line-height:normal; 
+  box-sizing: border-box; 
+  font-family: Verdana,sans-serif;
+
+}
   </style>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -48,25 +96,73 @@
     <div id="user_nav">
       <% if user_signed_in? %>
           <div class="row" style = "background: black; height: 30px; border: 2px solid white">
-              <div class="span" align="left">
+              <div class="span12" align="left">
                 <h4 style ="font-family: 'Calibri'; color: #3B82CC; font-size: 15px; line-height: 50%">
                    Bienvenido,  <%= current_user.username %>
                 </h4>
               </div>
-              <div align = "right">
+              <div class="span2" align = "right">
+                <div class="notificationCont">
+                  <span class="notification">3</span>
+                  <button class="btn btn-default" style= "color: white; background: #3B82CC; line-height: 50%">Solicitud</button>
+                </div>
+              </div>
+              <div class="span2" align="right">
                  <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete, :class => 'btn btn-link' %>
               </div>
           </div>
         
       <% end %>
       <% if user_signed_in? && current_user.has_role?(:prop) %>
-        <p>
-             BIENVENIDO ropietario <%= current_user.username %>.
-        </p>
+        <div class="container" align="center">
+          <div class="row-fluid" align= "center">
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-home button" href="/">Home</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-building button" href="/prop/constr">Mis Propiedades</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-money button" href="/prop/constr">Pagos y Cobros</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-file-alt button" href="/prop/constr">Mi contrato</a>
+              </div>
+            </div>
+          </div>
+        </div>
       <% elsif user_signed_in? && current_user.has_role?(:arrend) %>
-        <p>
-             BIENVENIDO arrendatario  <%= current_user.username %>.
-        </p>
+        <div class="container" align="center">
+          <div class="row-fluid" align= "center">
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-home button" href="/">Home</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-search button" href="/prop/constr">Buscar</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-exchange button" href="/prop/constr">Mis Arriendos</a>
+              </div>
+            </div>
+            <div class="span3">
+              <div class = "icon">
+                <a class="fontawesome-eye-open button" href="/prop/constr">Mis solicitudes</a>
+              </div>
+            </div>
+          </div>
+        </div>
       <% elsif user_signed_in? %>
         <div class="container" align="center">
           <div class="row-fluid" align= "center">
@@ -77,27 +173,27 @@
             </div>
             <div class="span2">
               <div class = "icon">
-                <a class="fontawesome-search button" href="/prop/constr">Buscar</a>
+                <a class="fontawesome-group button" href="/prop/constr">Usuarios</a>
               </div>
             </div>
             <div class="span2">
               <div class = "icon">
-                <a class="fontawesome-envelope button"></a>
+                <a class="fontawesome-building button" href="/prop/constr">Propiedades</a>
               </div>
             </div>
             <div class="span2">
               <div class = "icon">
-                <a class="fontawesome-search button"></a>
+                <a class="fontawesome-key button" href="/prop/constr">Propietarios</a>
               </div>
             </div>
             <div class="span2">
               <div class = "icon">
-                <a class="fontawesome-envelope button"></a>
+                <a class="fontawesome-exchange button"  href="/prop/constr">Arriendos</a>
               </div>
             </div>
             <div class="span2">
               <div class = "icon">
-                <a class="fontawesome-cog button" href="../servicios">Servicios</a>
+                <a class="fontawesome-wrench button" href="/prop/constr">Mantenimiento</a>
               </div>
             </div>
           </div>
