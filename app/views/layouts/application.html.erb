@@ -59,6 +59,50 @@
           </div>
         
       <% end %>
+      <% if user_signed_in? && current_user.has_role?(:prop) %>
+        <p>
+             BIENVENIDO ropietario <%= current_user.username %>.
+        </p>
+      <% elsif user_signed_in? && current_user.has_role?(:arrend) %>
+        <p>
+             BIENVENIDO arrendatario  <%= current_user.username %>.
+        </p>
+      <% elsif user_signed_in? %>
+        <div class="container" align="center">
+          <div class="row-fluid" align= "center">
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-home button" href="/">Home</a>
+              </div>
+            </div>
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-search button" href="/prop/constr">Buscar</a>
+              </div>
+            </div>
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-envelope button"></a>
+              </div>
+            </div>
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-search button"></a>
+              </div>
+            </div>
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-envelope button"></a>
+              </div>
+            </div>
+            <div class="span2">
+              <div class = "icon">
+                <a class="fontawesome-cog button" href="../servicios">Servicios</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
 </head>
 <p>

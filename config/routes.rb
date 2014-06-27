@@ -58,6 +58,8 @@ end
 
   get 'prop/index'
 
+  get 'prop/constr'
+  
   get 'admin/index'
 
   devise_for :users
