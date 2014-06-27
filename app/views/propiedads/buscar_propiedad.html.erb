@@ -1,13 +1,12 @@
 <h1>Buscar Propiedades</h1>
 
- <select name="TipoPropiedad[TipoPropiedad_id]">
-   <% @tipo_propiedads.each do |tipoP| %>
-       <option value="<%= tipoP.id %>" 
-         <%= 'selected' %>>
-         <%= tipoP.NombreTipo %>
-       </option>
-   <% end %>
-  </select></p>
+<%= form_for @search do |f| %>   
+ <p>   
+<%= f.label :TipoPropiedad_id_contains %>   
+<%= f.text_field :TipoPropiedad_id_contains %>   
+</p>   
+<p class="button"><%= f.submit "Search" %> </p>   
+<% end %>  
 
 <table>
   <thead>

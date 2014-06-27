@@ -8,9 +8,8 @@ class PropiedadsController < ApplicationController
   end
 
   def buscar_propiedad
-    @tipo_propiedads = TipoPropiedad.all
-    @propiedads = Propiedad.all
-    #@propiedads = Propiedad.find(@params["TipoPropiedad_id"])
+    @search = Propiedad.search(params[:search])   
+    @propiedads = @search.all  
   end
 
   # GET /propiedads/1
