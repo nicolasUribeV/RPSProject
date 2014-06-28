@@ -31,8 +31,8 @@ Rails.application.routes.draw do
   resources :propiedads do
     collection do
       get :buscar_propiedad
+    end
   end
-end
 
   resources :propietarios
 

@@ -1,10 +1,10 @@
 <h1>Buscar Propiedades</h1>
 
-<%= form_for @search do |f| %>   
+<%= form_for @propiedads do |f| %>   
  <p>   
 <%= f.label :TipoPropiedad_id_contains %>   
-<%= f.text_field :TipoPropiedad_id_contains %>   
-</p>   
+<%= f.text_field :search %>   
+</p>  
 <p class="button"><%= f.submit "Search" %> </p>   
 <% end %>  
 

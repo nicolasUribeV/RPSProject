@@ -8,8 +8,7 @@ class PropiedadsController < ApplicationController
   end
 
   def buscar_propiedad
-    @search = Propiedad.search(params[:search])   
-    @propiedads = @search.all  
+    @propiedads = Propiedad.where("TipoPropiedad_id LIKE ?", "#{params[:search]}")
   end
 
   # GET /propiedads/1

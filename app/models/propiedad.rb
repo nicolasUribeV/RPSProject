@@ -13,4 +13,5 @@ class Propiedad < ActiveRecord::Base
   has_many :Solicituds
   has_many :ContratoArriendos
   has_many :Arrendatarios, :through => :ContratoArriendos
+
 end
