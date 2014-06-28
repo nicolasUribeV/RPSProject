@@ -43,6 +43,7 @@ h2{
   font-size:2.5rem;
   z-index :1;
   line-height:90px;
+  border-radius: 50%;
 }
 
 
@@ -60,19 +61,17 @@ h2{
 	height: 100px;
   top:-95px;
   left:-5px;
-  box-shadow: 0 0 0 4px #fff;
   opacity:0;
   transform:scale(.8);
   transition:transform .2s, opacity .2s;
 }
 .fontawesome-search:after{
-  width: 100px;
-	height: 100px;
+  width: 90px;
+	height: 90px;
   top:-95px;
   left:-5px;
-  box-shadow: 0 0 0 4px #fff;
   transition:transform .2s, opacity .2s;
-  transform:scale(1.2);
+  transform:scale(.8);
   opacity:0;
 }
 
@@ -148,3 +147,294 @@ h2{
 		opacity: 0;
 	}
 }
+
+.fontawesome-cog{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-cog:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-cog:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-cog:hover{
+  background: #007792;
+}
+.fontawesome-cog:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-cog:hover:before{
+  color: white;
+} 
+
+.fontawesome-home{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-home:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-home:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-home:hover{
+  background: #007792;
+}
+.fontawesome-home:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-home:hover:before{
+  color: white;
+} 
+
+
+.fontawesome-building{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-building:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-building:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-building:hover{
+  background: #007792;
+}
+.fontawesome-building:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-building:hover:before{
+  color: white;
+} 
+
+.fontawesome-money{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-money:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-money:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-money:hover{
+  background: #007792;
+}
+.fontawesome-money:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-money:hover:before{
+  color: white;
+} 
+
+.fontawesome-file-alt{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-file-alt:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-file-alt:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-file-alt:hover{
+  background: #007792;
+}
+.fontawesome-file-alt:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-file-alt:hover:before{
+  color: white;
+} 
+
+.fontawesome-exchange{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-exchange:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-exchange:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-exchange:hover{
+  background: #007792;
+}
+.fontawesome-exchange:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-exchange:hover:before{
+  color: white;
+} 
+
+.fontawesome-eye-open{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-eye-open:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-eye-open:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-eye-open:hover{
+  background: #007792;
+}
+.fontawesome-eye-open:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-eye-open:hover:before{
+  color: white;
+} 
+
+.fontawesome-group{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-group:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-group:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-group:hover{
+  background: #007792;
+}
+.fontawesome-group:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-group:hover:before{
+  color: white;
+} 
+
+.fontawesome-key{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-key:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-key:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-key:hover{
+  background: #007792;
+}
+.fontawesome-key:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-key:hover:before{
+  color: white;
+} 
+
+.fontawesome-wrench{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-wrench:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-wrench:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-wrench:hover{
+  background: #007792;
+}
+.fontawesome-wrench:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-wrench:hover:before{
+  color: white;
+} 

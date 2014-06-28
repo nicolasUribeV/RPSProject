@@ -8,8 +8,8 @@ class PropiedadsController < ApplicationController
     @propiedads = @q.result
   end
 
-  def buscarTipo
-    @propiedads = Propiedad.search(params[:tipo])
+  def buscar_propiedad
+    @propiedads = Propiedad.all
   end
 
   # GET /propiedads/1

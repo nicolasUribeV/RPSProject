@@ -31,8 +31,8 @@ Rails.application.routes.draw do
   resources :propiedads do
     collection do
       get :buscar_propiedad
+    end
   end
-end
 
   resources :propietarios
 
@@ -58,6 +58,8 @@ end
 
   get 'prop/index'
 
+  get 'prop/constr'
+  
   get 'admin/index'
 
   devise_for :users
