@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :Ubicacion_id %><br>
-    <%= f.text_field :Ubicacion_id %>
+    <%= f.collection_select :Ubicacion_id, Ubicacion.order(:id), :id,:NombreUbicacion, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :TipoPropiedad_id %><br>
-    <%= f.text_field :TipoPropiedad_id %>
+    <%= f.collection_select :TipoPropiedad_id, TipoPropiedad.order(:id), :id,:NombreTipo, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :Propietario_id %><br>
-    <%= f.text_field :Propietario_id %>
+    <%= f.collection_select :Propietario_id, Propietario.order(:id), :id,:id, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :DireccionPropiedad %><br>

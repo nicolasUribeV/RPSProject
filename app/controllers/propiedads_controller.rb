@@ -4,11 +4,12 @@ class PropiedadsController < ApplicationController
   # GET /propiedads
   # GET /propiedads.json
   def index
-    @propiedads = Propiedad.all
+    @q = Propiedad.search(params[:q])
+    @propiedads = @q.result
   end
 
-  def buscar_propiedad
-    @propiedads = Propiedad.all
+  def buscarTipo
+    @propiedads = Propiedad.search(params[:tipo])
   end
 
   # GET /propiedads/1
