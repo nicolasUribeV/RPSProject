@@ -9,11 +9,25 @@ class PropiedadsController < ApplicationController
   end
 
   def buscar_propiedad
-    @propiedads = Propiedad.all
+    @q = Propiedad.search(params[:q])
+    @propiedads = @q.result
+    @regiones = Ubicacion.where("Ubicacion_id IS NULL").order(:NombreUbicacion)
+    @comunas = Ubicacion.where("Ubicacion_id = ?", Ubicacion.where("Ubicacion_id IS NULL").order(:NombreUbicacion).first.id)
+  end
+
+  def update_comunas
+    @comunas = Ubicacion.where("Ubicacion_id = ?", params[:Ubicacion_id])
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /propiedads/1
   # GET /propiedads/1.json
+  def show1
+     @ubicacion = Ubicacion.find_by("id = ?", params[:trip][:Ubicacion_id])
+  end
+
   def show
   end
 

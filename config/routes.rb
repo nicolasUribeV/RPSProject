@@ -32,6 +32,12 @@ Rails.application.routes.draw do
     collection do
       get :buscar_propiedad
     end
+    collection do
+      get :update_comunas, as: 'update_comunas'
+    end
+    collection do
+      get :show1
+    end
   end
 
   resources :propietarios
@@ -74,8 +80,6 @@ Rails.application.routes.draw do
       root :to => 'welcome#index', as: :unauthenticated_root
     end
   end
-
-
   
   get 'welcome/index'
 
