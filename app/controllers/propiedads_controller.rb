@@ -22,6 +22,10 @@ class PropiedadsController < ApplicationController
     end
   end
 
+  def propiedad_usuario
+    
+  end
+
   # GET /propiedads/1
   # GET /propiedads/1.json
   def show1
