@@ -1,11 +1,11 @@
-<h1>Servicios</h1>
-<div class="container">
-  <table>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+  <h1>Servicios</h1>
+  <table border=2 align="center" style="margin-top: 5px; blackground: white">
     <thead>
       <tr>
-        <th>Nombreservicio</th>
+        <th>Nombre del servicio</th>
         <th>Descripcion</th>
-        <th>Estadoservicio</th>
+        <th>Estado del servicio</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -15,15 +15,19 @@
         <tr>
           <td><%= servicio.NombreServicio %></td>
           <td><%= servicio.Descripcion %></td>
-          <td><%= servicio.EstadoServicio %></td>
-          <td><%= link_to 'Show', servicio %></td>
-          <td><%= link_to 'Edit', edit_servicio_path(servicio) %></td>
-          <td><%= link_to 'Destroy', servicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
+          <% if servicio.EstadoServicio? %>
+            <td>Habilitado </td>
+          <% else %>
+            <td>DesHabilitado</td>
+          <% end %>
+          
+          <td><%= link_to 'Editar', edit_servicio_path(servicio) %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   <br>
 
-  <%= link_to 'New Servicio', new_servicio_path, :class => "btn btn-default" %>
+  <%= link_to 'Nuevo Servicio', new_servicio_path, :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
 </div>

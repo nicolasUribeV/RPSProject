@@ -438,3 +438,32 @@ h2{
 .fontawesome-wrench:hover:before{
   color: white;
 } 
+
+.fontawesome-coffee{
+  background: black;
+  transition:background .2s;
+}
+.fontawesome-coffee:after{
+  width: 90px;
+  height: 90px;
+  top:-95px;
+  left:-5px;
+  transition:transform .2s, opacity .2s;
+  transform:scale(.8);
+  opacity:0;
+}
+.fontawesome-coffee:before{
+  color:white;
+  transition:color .2s;
+}
+
+.fontawesome-coffee:hover{
+  background: #007792;
+}
+.fontawesome-coffee:hover:after{
+    transform:scale(1);
+    opacity:1;
+}
+.fontawesome-coffee:hover:before{
+  color: white;
+} 

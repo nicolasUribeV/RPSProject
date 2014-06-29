@@ -12,18 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :NombreItem %><br>
+    <%= f.label :Nombre_del_Item %>
     <%= f.text_field :NombreItem %>
   </div>
   <div class="field">
-    <%= f.label :DescripcionItem %><br>
+    <%= f.label :Descripcion %>
     <%= f.text_area :DescripcionItem %>
   </div>
   <div class="field">
-    <%= f.label :EstadoItem %><br>
-    <%= f.check_box :EstadoItem %>
+    <div class="span3">
+      <%= f.label :Estado_del_Item %>
+    </div>
+    <div class="span8">
+      <%= f.check_box :EstadoItem %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Guardar %>
   </div>
 <% end %>

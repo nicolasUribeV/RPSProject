@@ -1,6 +1,10 @@
-<h1>Editing item</h1>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+	<div class="row-fluid">
+		<h1>Editar Item</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
+		<div style="margin-left: 10px; margin-bottom: 20px">
+			<%= render 'form' %>
+			<%= link_to 'Atrás', items_path, :class => "btn btn-default" %>
+		</div>
+	</div>
+</div>
