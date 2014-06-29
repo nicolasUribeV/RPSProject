@@ -28,9 +28,6 @@ class PropiedadsController < ApplicationController
 
   # GET /propiedads/1
   # GET /propiedads/1.json
-  def show1
-     @ubicacion = Ubicacion.find_by("id = ?", params[:trip][:Ubicacion_id])
-  end
 
   def show
   end
