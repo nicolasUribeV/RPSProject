@@ -5,7 +5,7 @@ class PropiedadsController < ApplicationController
   # GET /propiedads.json
   def index
     @q = Propiedad.search(params[:q])
-    @propiedads = @q.result
+    @propiedads = @q.result(:distinct => true)
   end
 
   def buscar_propiedad
