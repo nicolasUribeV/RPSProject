@@ -12,46 +12,56 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Ubicacion_id %><br>
-    <%= f.collection_select :Ubicacion_id, Ubicacion.order(:id), :id,:NombreUbicacion, include_blank: false %>
+    <div class="span5">
+      <%= f.label :Ubicacion_id %>
+      <%= f.collection_select :Ubicacion_id, Ubicacion.order(:id), :id,:NombreUbicacion, include_blank: false %>
+    </div>
+    <div class="span5">
+      <%= f.label :TipoPropiedad_id %>
+      <%= f.collection_select :TipoPropiedad_id, TipoPropiedad.order(:id), :id,:NombreTipo, include_blank: false %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :TipoPropiedad_id %><br>
-    <%= f.collection_select :TipoPropiedad_id, TipoPropiedad.order(:id), :id,:NombreTipo, include_blank: false %>
+    <div class="span5">
+      <%= f.label :Propietario_id %>
+      <%= f.collection_select :Propietario_id, Propietario.order(:id), :id,:id, include_blank: false %>
+    </div>
+    <div class="span5">
+      <%= f.label :DireccionPropiedad %>
+      <%= f.text_field :DireccionPropiedad %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :Propietario_id %><br>
-    <%= f.collection_select :Propietario_id, Propietario.order(:id), :id,:id, include_blank: false %>
+    <div class="span3">
+      <%= f.label :Estacionamiento %>
+      <%= f.check_box :Estacionamiento %>
+    </div>
+    <div class="span3">
+      <%= f.label :Bodega %>
+      <%= f.check_box :Bodega %>
+    </div>
+    <div class="span3">
+      <%= f.label :Equipada_Muebles %>
+      <%= f.check_box :EquipadaMuebles %>
+    </div>
+    <div class="span3">
+      <%= f.label :Habilitada %>
+      <%= f.check_box :Habilitada %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :DireccionPropiedad %><br>
-    <%= f.text_field :DireccionPropiedad %>
-  </div>
-  <div class="field">
-    <%= f.label :Estacionamiento %><br>
-    <%= f.check_box :Estacionamiento %>
-  </div>
-  <div class="field">
-    <%= f.label :Bodega %><br>
-    <%= f.check_box :Bodega %>
-  </div>
-  <div class="field">
-    <%= f.label :EquipadaMuebles %><br>
-    <%= f.check_box :EquipadaMuebles %>
-  </div>
-  <div class="field">
-    <%= f.label :M2Totales %><br>
-    <%= f.number_field :M2Totales %>
-  </div>
-  <div class="field">
-    <%= f.label :Descripcion %><br>
-    <%= f.text_area :Descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :Habilitada %><br>
-    <%= f.check_box :Habilitada %>
+    <div class="span5">
+      <%= f.label :M2Totales %>
+      <%= f.number_field :M2Totales %>
+    </div>
+    <div class="span5">
+      <%= f.label :Descripcion %>
+      <%= f.text_area :Descripcion %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <div class="span14">
+      <%= f.submit :Guardar %>
+    </div>
   </div>
 <% end %>
