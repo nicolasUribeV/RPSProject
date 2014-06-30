@@ -13,7 +13,7 @@ class SolicitudsController < ApplicationController
   end
 
   def ver_solicitudes_cliente
-    @solicituds = Solicitud.where("Arrendatario_id = ?",Usuario.where("Rut = ?",current_user.username).first.Arrendatario.id).order(:FechaEmision)
+    @solicituds = Solicitud.all
   end
 
   # GET /solicituds/new

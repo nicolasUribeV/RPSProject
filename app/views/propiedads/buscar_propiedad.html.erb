@@ -6,7 +6,7 @@
       <h4>Tipo de propiedad</h4>
       <%= f.select :TipoPropiedad_id_eq, options_from_collection_for_select(TipoPropiedad.all, "id", "NombreTipo"), include_blank: 'Todos los tipo' %>
       <h4>Ubicación</h4>
-        <%= f.select :Ubicacion_id_eq, options_for_select(@regiones.collect { |ubicacion| [ubicacion.NombreUbicacion.titleize, ubicacion.id] }, 1), {:include_blank => 'Todas las provincia'}, { id: 'regiones_select' } %>
+        <%= f.select :Ubicacion_id_eq, options_for_select(@regiones.collect { |ubicacion| [ubicacion.NombreUbicacion.titleize, ubicacion.id] }, 1), {:include_blank => false}, { id: 'regiones_select' } %>
       <%= f.select :Ubicacion_id_eq, options_for_select(@comunas.collect { |ubicacion| [ubicacion.NombreUbicacion.titleize, ubicacion.id] }, 0), {:include_blank => 'Todas las comunas'}, { id: 'comunas_select' } %><hr>
       <%= f.submit :Buscar%>
     <% end %>

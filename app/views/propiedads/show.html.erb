@@ -3,21 +3,21 @@
 
   <p>
     <strong>Ubicacion:</strong>
-    <%= @propiedad.Ubicacion %>
+    <%= Ubicacion.find(@propiedad.Ubicacion).NombreUbicacion %>
   </p>
 
   <p>
-    <strong>Tipopropiedad:</strong>
-    <%= @propiedad.TipoPropiedad %>
+    <strong>Tipo Propiedad:</strong>
+    <%= TipoPropiedad.find(@propiedad.TipoPropiedad).NombreTipo %>
   </p>
 
   <p>
     <strong>Propietario:</strong>
-    <%= @propiedad.Propietario %>
+    <%= Usuario.find(Propietario.find(@propiedad.Propietario).Usuario_id).Rut %>
   </p>
 
   <p>
-    <strong>Direccionpropiedad:</strong>
+    <strong>Direccion Propiedad:</strong>
     <%= @propiedad.DireccionPropiedad %>
   </p>
 
@@ -50,7 +50,7 @@
     <strong>Habilitada:</strong>
     <%= @propiedad.Habilitada %>
   </p>
-  <% if user_signed_in? %>
+  <% if user_signed_in? && current_user.has_role?(:arrend) %>
     <%= link_to 'Realizar Solicitud', new_solicitud_path(@propiedad), :class => "btn btn-default" %> |
   <% end %>
   <%= link_to 'Atrás', "/propiedads/buscar_propiedad", :class => "btn btn-default" %>

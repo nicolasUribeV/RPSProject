@@ -1,17 +1,17 @@
 <div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
   <div class="row-fluid">
-    <h1>Editar Servicio</h1>
+    <h1>Informacion de solicitud</h1>
 
     <div style="margin-left: 10px; margin-bottom: 20px">
       <p id="notice"><%= notice %></p>
       <p>
         <strong>Propiedad:</strong>
-        <%= @solicitud.Propiedad %>
+        <%= Propiedad.find(@solicitud.Propiedad).id %>
       </p>
 
       <p>
         <strong>Arrendatario:</strong>
-        <%= @solicitud.Arrendatario %>
+        <%= Usuario.find(Arrendatario.find(@solicitud.Arrendatario).Usuario_id).Rut %>
       </p>
 
       <p>
@@ -38,8 +38,7 @@
         <strong>Fin:</strong>
         <%= @solicitud.fin %>
       </p>
-
-      <%= link_to 'Ir a Mis Solicitudes', "/solicituds/ver_solicitudes_clientes" %>
+      <%= link_to 'Ir a Mis Solicitudes', "/solicituds/ver_solicitudes_cliente", :class => "btn btn-default" %>
     </div>
   </div>
 </div>

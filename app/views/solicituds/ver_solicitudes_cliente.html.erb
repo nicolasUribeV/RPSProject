@@ -1,28 +1,34 @@
-<h1>Mis solicitudes</h1>
-
-<table>
-  <thead>
-    <tr>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+  <h1>Mis Solicitudes</h1>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+    <table border=2 align="center" style="table-layout: fixed; blackground: white">
+      <thead>
+        <tr>
       <th>Propiedad</th>
       <th>Fechaemision</th>
       <th>Estado</th>
       <th>Inicio</th>
       <th>Fin</th>
       <th colspan="3"></th>
-    </tr>
-  </thead>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @solicituds.each do |solicitud| %>
-      <tr>
-        <td><%= solicitud.Propiedad %></td>
-        <td><%= solicitud.FechaEmision %></td>
-        <td><%= solicitud.Estado %></td>
-        <td><%= solicitud.inicio %></td>
-        <td><%= solicitud.fin %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+      <tbody>
+        <% Solicitud.joins("JOIN arrendatarios ON arrendatarios.id = solicituds.Arrendatario_id").joins("JOIN usuarios ON arrendatarios.Usuario_id = usuarios.id").where("usuarios.Rut = ?",current_user.username).each do |solicitud| %>
+          <tr>
+            <td><%= Propiedad.find(solicitud.Propiedad).id %></td>
+            <td><%= solicitud.FechaEmision %></td>
+              <% if solicitud.Estado? %>
+                <td><%= "Aceptada" %></td>
+              <% else %>
+                <td><%= "En espera" %></td>
+              <% end %>
+            <td><%= solicitud.inicio %></td>
+            <td><%= solicitud.fin %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+</div>
