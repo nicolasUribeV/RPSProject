@@ -1,4 +1,4 @@
-<div id="cuadro" style="background: #B0A9AA; margin-left: 20%; margin-right: 20%; border: solid 2px">
+<div id="cuadro" style="background: #B0A9AA; margin-left: 15%; margin-right: 15%; border: solid 2px">
   <h1>Propiedades</h1>
   <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
     <table border=2 align="center" style="table-layout: fixed; blackground: white">
@@ -19,14 +19,22 @@
       <tbody>
         <% @propiedads.each do |propiedad| %>
           <tr>
-            <td><%= propiedad.Ubicacion %></td>
-            <td><%= propiedad.TipoPropiedad %></td>
-            <td><%= propiedad.Propietario %></td>
+            <td><%= Ubicacion.find(propiedad.Ubicacion).NombreUbicacion %></td>
+            <td><%= TipoPropiedad.find(propiedad.TipoPropiedad).NombreTipo %></td>
+            <td><%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Nombre %> <%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Apellido%></td>
             <td><%= propiedad.DireccionPropiedad %></td>
-            <td><%= propiedad.EquipadaMuebles %></td>
+            <% if propiedad.EquipadaMuebles? %>
+              <td>Amueblada </td>
+            <% else %>
+              <td>No amueblada</td>
+            <% end %>
             <td><%= propiedad.M2Totales %></td>
             <td><%= propiedad.Descripcion %></td>
-            <td><%= propiedad.Habilitada %></td>
+            <% if propiedad.Habilitada? %>
+              <td>Habilitado </td>
+            <% else %>
+              <td>DesHabilitado</td>
+            <% end %>
             <td><%= link_to 'Show', propiedad %></td>
           </tr>
         <% end %>

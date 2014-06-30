@@ -20,7 +20,12 @@
             <td><%= TipoPropiedad.find(propiedad.TipoPropiedad).NombreTipo %></td>
             <td><%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Nombre %> <%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Apellido%></td>
             <td><%= propiedad.DireccionPropiedad %></td>
-            <td><%= propiedad.Habilitada %></td>
+            
+            <% if propiedad.Habilitada? %>
+              <td>Habilitado </td>
+            <% else %>
+              <td>DesHabilitado</td>
+            <% end %>
             <td><%= link_to 'Mostrar', propiedad %></td>
           </tr>
         <% end %>
