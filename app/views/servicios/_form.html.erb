@@ -13,6 +13,13 @@
   <div class="field">
     <%= f.label :Nombre_del_Servicio %>
     <%= f.text_field :NombreServicio %>
+    <% if @servicio.errors.any? %>
+     <ul>
+        <% @servicio.errors.each do |atributo, mensaje| %>
+        <li> <%= mensaje %> </li>
+        <% end %>
+     </ul>
+  <% end %>
   </div>
   <div class="field">
     <%= f.label :Descripcion %>

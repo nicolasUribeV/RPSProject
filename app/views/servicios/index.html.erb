@@ -1,32 +1,34 @@
 <div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
   <h1>Servicios</h1>
-  <table border=2 align="center" style="margin-top: 5px; blackground: white">
-    <thead>
-      <tr>
-        <th>Nombre del servicio</th>
-        <th>Descripcion</th>
-        <th>Estado del servicio</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @servicios.each do |servicio| %>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+    <table border=2 align="center" style="table-layout: fixed; blackground: white">
+      <thead>
         <tr>
-          <td><%= servicio.NombreServicio %></td>
-          <td><%= servicio.Descripcion %></td>
-          
-          <% if servicio.EstadoServicio? %>
-            <td>Habilitado </td>
-          <% else %>
-            <td>DesHabilitado</td>
-          <% end %>
-          
-          <td><%= link_to 'Editar', edit_servicio_path(servicio) %></td>
+          <th width="25%">Nombre del servicio</th>
+          <th widht="45%">Descripcion</th>
+          <th width="20%">Estado del servicio</th>
+          <th width="10%"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @servicios.each do |servicio| %>
+          <tr>
+            <td><%= servicio.NombreServicio %></td>
+            <td><%= servicio.Descripcion %></td>
+            
+            <% if servicio.EstadoServicio? %>
+              <td>Habilitado </td>
+            <% else %>
+              <td>DesHabilitado</td>
+            <% end %>
+            
+            <td><%= link_to 'Editar', edit_servicio_path(servicio) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
   <br>
 
   <%= link_to 'Nuevo Servicio', new_servicio_path, :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
