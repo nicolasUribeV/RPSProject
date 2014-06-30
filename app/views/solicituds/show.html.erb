@@ -1,38 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+  <div class="row-fluid">
+    <h1>Editar Servicio</h1>
 
-<p>
-  <strong>Propiedad:</strong>
-  <%= @solicitud.Propiedad %>
-</p>
+    <div style="margin-left: 10px; margin-bottom: 20px">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <strong>Propiedad:</strong>
+        <%= @solicitud.Propiedad %>
+      </p>
 
-<p>
-  <strong>Arrendatario:</strong>
-  <%= @solicitud.Arrendatario %>
-</p>
+      <p>
+        <strong>Arrendatario:</strong>
+        <%= @solicitud.Arrendatario %>
+      </p>
 
-<p>
-  <strong>Fechaemision:</strong>
-  <%= @solicitud.FechaEmision %>
-</p>
+      <p>
+        <strong>Fechaemision:</strong>
+        <%= @solicitud.FechaEmision %>
+      </p>
 
-<p>
-  <strong>Estado:</strong>
-  <%= @solicitud.Estado %>
-</p>
+      <p>
+        <strong>Estado:</strong>
+        <%= @solicitud.Estado %>
+      </p>
 
-<p>
-  <strong>Tiposolicitud:</strong>
-  <%= @solicitud.TipoSolicitud %>
-</p>
+      <p>
+        <strong>Tiposolicitud:</strong>
+        <%= @solicitud.TipoSolicitud %>
+      </p>
 
-<p>
-  <strong>Inicio:</strong>
-  <%= @solicitud.inicio %>
-</p>
+      <p>
+        <strong>Inicio:</strong>
+        <%= @solicitud.inicio %>
+      </p>
 
-<p>
-  <strong>Fin:</strong>
-  <%= @solicitud.fin %>
-</p>
+      <p>
+        <strong>Fin:</strong>
+        <%= @solicitud.fin %>
+      </p>
 
-<%= link_to 'Ir a Mis Solicitudes', "/solicituds/ver_solicitudes_clientes" %>
+      <%= link_to 'Ir a Mis Solicitudes', "/solicituds/ver_solicitudes_clientes" %>
+    </div>
+  </div>
+</div>

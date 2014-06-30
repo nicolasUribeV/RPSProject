@@ -53,5 +53,5 @@
   <% if user_signed_in? %>
     <%= link_to 'Realizar Solicitud', new_solicitud_path(@propiedad), :class => "btn btn-default" %> |
   <% end %>
-  <%= link_to 'Atrás', propiedads_path, :class => "btn btn-default" %>
+  <%= link_to 'Atrás', "/propiedads/buscar_propiedad", :class => "btn btn-default" %>
 </div>
