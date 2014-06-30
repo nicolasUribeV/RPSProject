@@ -1,41 +1,42 @@
-<h1>Listing contrato_arriendos</h1>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 10%; margin-right: 10%; border: solid 2px">
+  <h1>Contratos de arriendo</h1>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+    <table border=2 align="center" style="table-layout: fixed; blackground: white">
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Arrendatario</th>
+          <th>Fechainicioarriendo</th>
+          <th>Fechaterminoarriendo</th>
+          <th>Tiporenovacion</th>
+          <th>Periodoreajuste</th>
+          <th>Multaperiocidad</th>
+          <th>Diapago</th>
+          <th>Contratodigital</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Propiedad</th>
-      <th>Arrendatario</th>
-      <th>Fechainicioarriendo</th>
-      <th>Fechaterminoarriendo</th>
-      <th>Tiporenovacion</th>
-      <th>Periodoreajuste</th>
-      <th>Multaperiocidad</th>
-      <th>Diapago</th>
-      <th>Contratodigital</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contrato_arriendos.each do |contrato_arriendo| %>
-      <tr>
-        <td><%= contrato_arriendo.Propiedad %></td>
-        <td><%= contrato_arriendo.Arrendatario %></td>
-        <td><%= contrato_arriendo.FechaInicioArriendo %></td>
-        <td><%= contrato_arriendo.FechaTerminoArriendo %></td>
-        <td><%= contrato_arriendo.TipoRenovacion %></td>
-        <td><%= contrato_arriendo.PeriodoReajuste %></td>
-        <td><%= contrato_arriendo.MultaPeriocidad %></td>
-        <td><%= contrato_arriendo.DiaPago %></td>
-        <td><%= contrato_arriendo.ContratoDigital %></td>
-        <td><%= link_to 'Show', contrato_arriendo %></td>
-        <td><%= link_to 'Edit', edit_contrato_arriendo_path(contrato_arriendo) %></td>
-        <td><%= link_to 'Destroy', contrato_arriendo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Contrato arriendo', new_contrato_arriendo_path %>
+      <tbody>
+        <% @contrato_arriendos.each do |contrato_arriendo| %>
+          <tr>
+            <td><%= contrato_arriendo.Propiedad %></td>
+            <td><%= contrato_arriendo.Arrendatario %></td>
+            <td><%= contrato_arriendo.FechaInicioArriendo %></td>
+            <td><%= contrato_arriendo.FechaTerminoArriendo %></td>
+            <td><%= contrato_arriendo.TipoRenovacion %></td>
+            <td><%= contrato_arriendo.PeriodoReajuste %></td>
+            <td><%= contrato_arriendo.MultaPeriocidad %></td>
+            <td><%= contrato_arriendo.DiaPago %></td>
+            <td><%= contrato_arriendo.ContratoDigital %></td>
+            <td><%= link_to 'Show', contrato_arriendo %></td>
+            <td><%= link_to 'Edit', edit_contrato_arriendo_path(contrato_arriendo) %></td>
+            <td><%= link_to 'Destroy', contrato_arriendo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <%= link_to 'Nuevo Contrato Arriendo', new_contrato_arriendo_path, :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
+</div>
