@@ -14,6 +14,13 @@
   <div class="field">
     <%= f.label :Nombre_del_Item %>
     <%= f.text_field :NombreItem %>
+    <% if @item.errors.any? %>
+     <ul>
+        <% @item.errors.each do |atributo, mensaje| %>
+        <li> <%= mensaje %> </li>
+        <% end %>
+     </ul>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :Descripcion %>
