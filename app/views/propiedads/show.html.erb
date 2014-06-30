@@ -50,7 +50,8 @@
     <strong>Habilitada:</strong>
     <%= @propiedad.Habilitada %>
   </p>
-
-  <%= link_to 'New', new_solicitud_path(@propiedad), :class => "btn btn-default" %> |
+  <% if user_signed_in? %>
+    <%= link_to 'Realizar Solicitud', new_solicitud_path(@propiedad), :class => "btn btn-default" %> |
+  <% end %>
   <%= link_to 'Atrás', propiedads_path, :class => "btn btn-default" %>
 </div>

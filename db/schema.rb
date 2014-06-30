@@ -271,7 +271,7 @@ ActiveRecord::Schema.define(version: 20140630025055) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
-    t.integer  "roles_mascara"
+    t.integer  "roles_mascara",          default: 2
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
