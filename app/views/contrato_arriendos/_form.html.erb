@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :Propiedad_id %><br>
-    <%= f.collection_select :Propiedad_id, Propiedad.order(:id), :id, :DireccionPropiedad, include_blank: false %>
+    <%= f.collection_select :Propiedad_id, Propiedad.order(:id), :id, :id, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :Arrendatario_id %><br>
-    <%= f.collection_select :Arrendatario_id, Arrendatario.joins("JOIN usuarios ON arrendatarios.Usuario_id = usuarios.id"),:id, :(usuarios.Nombre), include_blank: false %>
+    <%= f.collection_select :Arrendatario_id, Arrendatario.joins(:Usuarios), :Arrendatario_id, :Nombre, include_blank: false %>
   </div>
   <div class="field">
     <%= f.label :FechaInicioArriendo %><br>

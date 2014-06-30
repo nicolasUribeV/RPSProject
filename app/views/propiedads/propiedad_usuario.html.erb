@@ -16,9 +16,9 @@
       <tbody>
         <% Propiedad.joins("JOIN propietarios ON propietarios.id = propiedads.propietario_id").joins("JOIN usuarios ON propietarios.Usuario_id = usuarios.id").where("usuarios.Rut = ?",current_user.username).each do |propiedad| %>
           <tr>
-            <td><%= propiedad.Ubicacion %></td>
-            <td><%= propiedad.TipoPropiedad %></td>
-            <td><%= propiedad.Propietario %></td>
+            <td><%= Ubicacion.find(propiedad.Ubicacion).NombreUbicacion %></td>
+            <td><%= TipoPropiedad.find(propiedad.TipoPropiedad).NombreTipo %></td>
+            <td><%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Nombre %> <%= Usuario.find(Propietario.find(propiedad.Propietario).Usuario_id).Apellido%></td>
             <td><%= propiedad.DireccionPropiedad %></td>
             <td><%= propiedad.Habilitada %></td>
             <td><%= link_to 'Mostrar', propiedad %></td>
