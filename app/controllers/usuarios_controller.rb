@@ -21,6 +21,10 @@ class UsuariosController < ApplicationController
   def edit
   end
 
+  def habilitar_prop
+    @usuarios = Usuario.all
+  end
+
   # POST /usuarios
   # POST /usuarios.json
   def create
@@ -53,6 +57,10 @@ class UsuariosController < ApplicationController
 
   # DELETE /usuarios/1
   # DELETE /usuarios/1.json
+  def update_habilitar_prop
+     User.update(User.where(Usuario.where(@usuario).first.Rut).first.id ,:roles_mascara => 4)
+  end
+
   def destroy
     @usuario.destroy
     respond_to do |format|

@@ -36,7 +36,7 @@ Rails.application.routes.draw do
       get :update_comunas, as: 'update_comunas'
     end
     collection do
-      get :show1
+      get :propiedad_usuario
     end
   end
 
@@ -46,7 +46,11 @@ Rails.application.routes.draw do
 
   resources :ubicacions
 
-  resources :usuarios
+  resources :usuarios do
+    collection do
+      get :habilitar_prop
+    end
+  end
 
   resources :calendarios
 
@@ -82,7 +86,7 @@ Rails.application.routes.draw do
   end
   
   get 'welcome/index'
-
+  post 'usuarios/:id' => 'usuarios#update_habilitar_prop'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

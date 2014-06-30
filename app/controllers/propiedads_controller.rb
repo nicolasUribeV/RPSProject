@@ -23,7 +23,7 @@ class PropiedadsController < ApplicationController
   end
 
   def propiedad_usuario
-    
+    @propiedads = Propiedad.all
   end
 
   # GET /propiedads/1

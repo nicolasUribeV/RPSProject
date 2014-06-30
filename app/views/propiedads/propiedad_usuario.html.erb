@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% Propiedad.joins("LEFT JOIN Propiedad ON usuarios.id = arrendatarios.usuario_id").where("arrendatarios.usuario_id IS NULL") do |propiedad| %>
+    <% Propiedad.joins("JOIN propietarios ON propietarios.id = propiedads.propietario_id").joins("JOIN usuarios ON propietarios.Usuario_id = usuarios.id").where("usuarios.Rut = ?",current_user.username).each do |propiedad| %>
       <tr>
         <td><%= propiedad.Ubicacion %></td>
         <td><%= propiedad.TipoPropiedad %></td>
