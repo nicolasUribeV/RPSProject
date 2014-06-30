@@ -4,14 +4,7 @@
   <thead>
     <tr>
       <th>Rut</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Fechanac</th>
       <th>Mail</th>
-      <th>Telefono</th>
-      <th>Direccion</th>
-      <th>Fecharegistro</th>
-      <th>Administrador</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +13,7 @@
     <% @usuarios.each do |usuario| %>
       <tr>
         <td><%= usuario.Rut %></td>
-        <td><%= usuario.Nombre %></td>
-        <td><%= usuario.Apellido %></td>
-        <td><%= usuario.FechaNac %></td>
         <td><%= usuario.Mail %></td>
-        <td><%= usuario.Telefono %></td>
-        <td><%= usuario.Direccion %></td>
-        <td><%= usuario.FechaRegistro %></td>
-        <td><%= usuario.administrador %></td>
         <td><%= link_to 'Habilitar/Deshabilitar', usuario, method: :update_habilitar_prop, data: { confirm: 'Seguro?' } %></td>
       </tr>
     <% end %>
@@ -35,5 +21,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Usuario', new_usuario_path %>
