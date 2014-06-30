@@ -1,11 +1,11 @@
 <div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
   <h1>Propiedades</h1>
-  <%= search_form_for @q do |f| %>
-    <%= f.label :TipoPropiedad_id %>
-    <%= f.select :TipoPropiedad_id_eq, options_from_collection_for_select(TipoPropiedad.all, "id", "NombreTipo"), include_blank: false %>
-    <%= f.submit %>
-  <% end %>
   <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+    <%= search_form_for @q do |f| %>
+      <%= f.label :TipoPropiedad_id %>
+      <%= f.select :TipoPropiedad_id_eq, options_from_collection_for_select(TipoPropiedad.all, "id", "NombreTipo"), include_blank: false %>
+      <%= f.submit %>
+    <% end %>
     <table border=2 align="center" style="table-layout: fixed; blackground: white">
       <thead>
         <tr>
@@ -45,5 +45,6 @@
     </table>
   </div>
   <br>
+
   <%= link_to 'New Propiedad', new_propiedad_path, :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
 </div>

@@ -1,5 +1,50 @@
 <h1>New solicitud</h1>
 
-<%= render 'form' %>
+<%= form_for(@solicitud) do |f| %>
+  <% if @solicitud.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@solicitud.errors.count, "error") %> prohibited this solicitud from being saved:</h2>
+
+      <ul>
+      <% @solicitud.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" style="display:none">
+    <%= f.label :Propiedad_id %><br>
+    <%= f.text_field :Propiedad_id, :value =>  Propiedad.find(params[:format]).id%>
+  </div>
+  <div class="field" style="display:none">
+    <%= f.label :Arrendatario_id %><br>
+    <%= f.text_field :Arrendatario_id, :value =>   Usuario.where("Rut = ?",current_user.username).first.Arrendatario.id %>
+  </div>
+  <div class="field" style="display:none">
+    <%= f.label :FechaEmision %><br>
+    <%= f.datetime_select :FechaEmision %>
+  </div>
+  <div class="field" style="display:none">
+    <%= f.label :Estado %><br>
+    <%= f.check_box :Estado %>
+  </div>
+  <div class="field">
+    <%= f.label :TipoSolicitud %><br>
+    <%= f.text_field :TipoSolicitud %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br>
+    <%= f.date_select :inicio, start_year: 2014%>
+  </div>
+  <div class="field">
+    <%= f.label :fin %><br>
+    <%= f.date_select :fin, start_year: 2014 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Back', solicituds_path %>

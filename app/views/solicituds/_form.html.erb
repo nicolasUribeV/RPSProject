@@ -20,16 +20,8 @@
     <%= f.text_field :Arrendatario_id %>
   </div>
   <div class="field">
-    <%= f.label :Calendario_id %><br>
-    <%= f.text_field :Calendario_id %>
-  </div>
-  <div class="field">
-    <%= f.label :Calendario_id %><br>
-    <%= f.text_field :Calendario_id %>
-  </div>
-  <div class="field">
     <%= f.label :FechaEmision %><br>
-    <%= f.date_select :FechaEmision %>
+    <%= f.datetime_select :FechaEmision %>
   </div>
   <div class="field">
     <%= f.label :Estado %><br>
@@ -38,6 +30,14 @@
   <div class="field">
     <%= f.label :TipoSolicitud %><br>
     <%= f.text_field :TipoSolicitud %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br>
+    <%= f.date_select :inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fin %><br>
+    <%= f.date_select :fin %>
   </div>
   <div class="actions">
     <%= f.submit %>

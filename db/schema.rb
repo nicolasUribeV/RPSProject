@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626072841) do
+ActiveRecord::Schema.define(version: 20140630025055) do
 
   create_table "arrendatarios", force: true do |t|
     t.integer  "Usuario_id"
@@ -20,12 +20,6 @@ ActiveRecord::Schema.define(version: 20140626072841) do
   end
 
   add_index "arrendatarios", ["Usuario_id"], name: "index_arrendatarios_on_Usuario_id", using: :btree
-
-  create_table "calendarios", force: true do |t|
-    t.datetime "Fecha"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "caracteristica_propiedads", force: true do |t|
     t.integer  "Propiedad_id"
@@ -229,16 +223,16 @@ ActiveRecord::Schema.define(version: 20140626072841) do
   create_table "solicituds", force: true do |t|
     t.integer  "Propiedad_id"
     t.integer  "Arrendatario_id"
-    t.integer  "Calendario_id"
-    t.date     "FechaEmision"
+    t.datetime "FechaEmision"
     t.boolean  "Estado"
     t.string   "TipoSolicitud"
+    t.date     "inicio"
+    t.date     "fin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "solicituds", ["Arrendatario_id"], name: "index_solicituds_on_Arrendatario_id", using: :btree
-  add_index "solicituds", ["Calendario_id"], name: "index_solicituds_on_Calendario_id", using: :btree
   add_index "solicituds", ["Propiedad_id"], name: "index_solicituds_on_Propiedad_id", using: :btree
 
   create_table "tipo_arriendos", force: true do |t|

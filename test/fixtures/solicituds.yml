@@ -3,17 +3,17 @@
 one:
   Propiedad_id: 
   Arrendatario_id: 
-  Calendario_id: 
-  Calendario_id: 
-  FechaEmision: 2014-06-23
+  FechaEmision: 2014-06-29 22:50:55
   Estado: false
   TipoSolicitud: MyString
+  inicio: 2014-06-29
+  fin: 2014-06-29
 
 two:
   Propiedad_id: 
   Arrendatario_id: 
-  Calendario_id: 
-  Calendario_id: 
-  FechaEmision: 2014-06-23
+  FechaEmision: 2014-06-29 22:50:55
   Estado: false
   TipoSolicitud: MyString
+  inicio: 2014-06-29
+  fin: 2014-06-29
