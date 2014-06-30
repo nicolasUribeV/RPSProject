@@ -1,7 +1,7 @@
 <div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
   <h1>Acceso Usuario</h1>
   <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
-<%= form_for(@usuario, url: "/usuarios/habilitar_prop") do |f| %>
+<%= form_for(@usuario) do |f| %>
   <% if @usuario.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
