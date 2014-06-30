@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :solicituds
-
   resources :valor_arriendos
 
   resources :notificacions
@@ -58,8 +56,6 @@ Rails.application.routes.draw do
       get :habilitar_prop
     end
   end
-
-  resources :calendarios
 
   resources :tipo_propiedads
 
