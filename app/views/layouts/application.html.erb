@@ -100,13 +100,7 @@
                    Bienvenido,  <%= current_user.username %>
                 </h4>
               </div>
-              <div class="span2" align = "right">
-                <div class="notificationCont">
-                  <span class="notification">3</span>
-                  <button class="btn btn-default" style= "color: white; background: #3B82CC; line-height: 50%">Solicitud</button>
-                </div>
-              </div>
-              <div class="span2" align="right">
+              <div class="span4" align="right">
                  <%= button_to "Cerrar Sesion", destroy_user_session_path, :method => :delete, :class => 'btn btn-link' %>
               </div>
           </div>

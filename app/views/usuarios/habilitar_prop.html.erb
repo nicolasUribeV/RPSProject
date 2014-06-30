@@ -1,23 +1,39 @@
-<h1>Listing usuarios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Rut</th>
-      <th>Mail</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @usuarios.each do |usuario| %>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 20%; margin-right: 20%; border: solid 2px">
+  <h1>Propietarios</h1>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+    <table border=2 align="center" style="table-layout: fixed; blackground: white">
+      <thead>
       <tr>
-        <td><%= usuario.Rut %></td>
-        <td><%= usuario.Mail %></td>
-        <td><%= link_to 'Habilitar/Deshabilitar', usuario, method: :update_habilitar_prop, data: { confirm: 'Seguro?' } %></td>
+        <th>Rut</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Mail</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Acceso al sistema</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
-<br>
+      <tbody>
+        <% @usuarios.each do |usuario| %>
+          <tr>
+            <td><%= usuario.Rut %></td>
+            <td><%= usuario.Nombre %></td>
+            <td><%= usuario.Apellido %></td>
+            <td><%= usuario.Mail %></td>
+            <td><%= usuario.Telefono %></td>
+            <td><%= usuario.Direccion %></td>
+            <% if usuario.administrador? %>
+              <td>Habilitado </td>
+            <% else %>
+              <td>DesHabilitado</td>
+            <% end %>
+            <td><%= link_to 'Inhabilitar', edit_usuario_path(usuario) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+</div>

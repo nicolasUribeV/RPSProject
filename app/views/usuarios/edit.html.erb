@@ -1,6 +1,7 @@
-<h1>Acceso usuario</h1>
-
-<%= form_for(@usuario) do |f| %>
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+  <h1>Acceso Usuario</h1>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
+<%= form_for(@usuario, url: "/usuarios/habilitar_prop") do |f| %>
   <% if @usuario.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
@@ -45,15 +46,15 @@
     <%= f.label :FechaRegistro %><br>
     <%= f.date_select :FechaRegistro %>
   </div>
-  <div class="field"">
+  <div class="field">
     <%= f.label "Acceso la sistema" %><br>
     <%= f.check_box :administrador %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Actualizar %>
   </div>
 <% end %>
-
-
-<%= link_to 'Show', @usuario %> |
-<%= link_to 'Back', usuarios_path %>
+  </div>
+  <%= link_to 'Atrás', "/usuarios/habilitar_prop", :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
+  <br>
+</div>

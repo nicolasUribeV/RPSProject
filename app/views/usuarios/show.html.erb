@@ -1,3 +1,6 @@
+<div id="cuadro" style="background: #B0A9AA; margin-left: 30%; margin-right: 30%; border: solid 2px">
+  <h1>Propietario</h1>
+  <div style="overflow: auto; word-break: break-all; height: 300px; border: solid 2px; margin-left: 5px; margin-right: 5px">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -36,7 +39,7 @@
 </p>
 
 <p>
-  <strong>Fecharegistro:</strong>
+  <strong>Fecha registro:</strong>
   <%= @usuario.FechaRegistro %>
 </p>
 
@@ -44,6 +47,7 @@
   <strong>Administrador:</strong>
   <%= @usuario.administrador %>
 </p>
-
-<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-<%= link_to 'Back', usuarios_path %>
+  </div>
+  <%= link_to 'Atrás', "/usuarios/habilitar_prop",  :class => "btn btn-default", :style => "margin-left: 10px; margin-bottom: 20px" %>
+  <br>
+</div>
