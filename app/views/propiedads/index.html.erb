@@ -1,11 +1,5 @@
 <h1>Listing propiedads</h1>
 
-<%= search_form_for @q do |f| %>
-  <%= f.label :TipoPropiedad_id %>
-  <%= f.select :TipoPropiedad_id_eq, options_from_collection_for_select(TipoPropiedad.all, "id", "NombreTipo"), include_blank: false %>
-  <%= f.submit %>
-<% end %>
-
 <table>
   <thead>
     <tr>

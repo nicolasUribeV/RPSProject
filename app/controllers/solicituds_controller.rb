@@ -12,6 +12,10 @@ class SolicitudsController < ApplicationController
   def show
   end
 
+  def ver_solicitudes_cliente
+    @solicitud = Solicitud.where("Arrendatario_id = ?",Usuario.where("Rut = ?",current_user.username).first.Arrendatario.id).order(:FechaEmision)
+  end
+
   # GET /solicituds/new
   def new
     @solicitud = Solicitud.new
@@ -69,6 +73,6 @@ class SolicitudsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def solicitud_params
-      params.require(:solicitud).permit(:Propiedad_id, :Arrendatario_id, :Calendario_id, :Calendario_id, :FechaEmision, :Estado, :TipoSolicitud)
+      params.require(:solicitud).permit(:Propiedad_id, :Arrendatario_id, :FechaEmision, :Estado, :TipoSolicitud, :inicio, :fin)
     end
 end

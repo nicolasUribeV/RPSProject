@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :solicituds
+
   resources :valor_arriendos
 
   resources :notificacions
@@ -22,7 +24,12 @@ Rails.application.routes.draw do
 
   resources :caracteristica_tipos
 
-  resources :solicituds
+  resources :solicituds do
+    collection do
+      get :ver_solicitudes_cliente
+    end
+  end
+
 
   resources :cupon_pago_arrendatarios
 

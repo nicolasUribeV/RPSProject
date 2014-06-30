@@ -18,7 +18,7 @@ class SolicitudsControllerTest < ActionController::TestCase
 
   test "should create solicitud" do
     assert_difference('Solicitud.count') do
-      post :create, solicitud: { Arrendatario_id: @solicitud.Arrendatario_id, Calendario_id: @solicitud.Calendario_id, Calendario_id: @solicitud.Calendario_id, Estado: @solicitud.Estado, FechaEmision: @solicitud.FechaEmision, Propiedad_id: @solicitud.Propiedad_id, TipoSolicitud: @solicitud.TipoSolicitud }
+      post :create, solicitud: { Arrendatario_id: @solicitud.Arrendatario_id, Estado: @solicitud.Estado, FechaEmision: @solicitud.FechaEmision, Propiedad_id: @solicitud.Propiedad_id, TipoSolicitud: @solicitud.TipoSolicitud, fin: @solicitud.fin, inicio: @solicitud.inicio }
     end
 
     assert_redirected_to solicitud_path(assigns(:solicitud))
@@ -35,7 +35,7 @@ class SolicitudsControllerTest < ActionController::TestCase
   end
 
   test "should update solicitud" do
-    patch :update, id: @solicitud, solicitud: { Arrendatario_id: @solicitud.Arrendatario_id, Calendario_id: @solicitud.Calendario_id, Calendario_id: @solicitud.Calendario_id, Estado: @solicitud.Estado, FechaEmision: @solicitud.FechaEmision, Propiedad_id: @solicitud.Propiedad_id, TipoSolicitud: @solicitud.TipoSolicitud }
+    patch :update, id: @solicitud, solicitud: { Arrendatario_id: @solicitud.Arrendatario_id, Estado: @solicitud.Estado, FechaEmision: @solicitud.FechaEmision, Propiedad_id: @solicitud.Propiedad_id, TipoSolicitud: @solicitud.TipoSolicitud, fin: @solicitud.fin, inicio: @solicitud.inicio }
     assert_redirected_to solicitud_path(assigns(:solicitud))
   end
 
